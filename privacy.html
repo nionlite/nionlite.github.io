@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NiONlite</title>
+  <meta name="description" content="NiONlite LLC Privacy Policy — how we collect, use, and protect your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:      #f7f5f2;
+      --bg2:     #edeae5;
+      --fg:      #1c1c1c;
+      --mid:     #7a7469;
+      --accent:  #8b2635;
+      --accent2: #b54455;
+      --border:  rgba(28,28,28,0.1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--fg); }
+
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 6%;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; letter-spacing: 0.06em; color: var(--fg); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .back-link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
+
+    main { max-width: 760px; margin: 0 auto; padding: 5rem 6% 7rem; }
+
+    .page-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem; }
+    .page-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 300; line-height: 1.1; color: var(--fg); margin-bottom: 0.6rem; }
+    h1 em { font-style: italic; color: var(--accent); }
+
+    .updated { font-size: 0.8rem; color: var(--mid); margin-bottom: 3.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+
+    .intro { font-size: 1rem; font-weight: 300; line-height: 1.85; color: var(--mid); margin-bottom: 3rem; }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 400;
+      color: var(--fg); margin: 2.8rem 0 0.9rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--accent);
+    }
+
+    p { font-size: 0.95rem; font-weight: 300; line-height: 1.85; color: var(--mid); margin-bottom: 1rem; }
+    p strong { color: var(--fg); font-weight: 500; }
+
+    ul { margin: 0.5rem 0 1.2rem 0; list-style: none; }
+    ul li {
+      font-size: 0.95rem; font-weight: 300; line-height: 1.8;
+      color: var(--mid); padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 0.7rem;
+    }
+    ul li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+    ul li:last-child { border-bottom: none; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent2); text-decoration: underline; }
+
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border) 30%, var(--border) 70%, transparent); margin: 2.5rem 0; }
+
+    .contact-box {
+      margin-top: 2rem; padding: 2rem;
+      border: 1px solid var(--border);
+      background: var(--bg2);
+      border-left: 3px solid var(--accent);
+    }
+    .contact-box p { margin-bottom: 0.4rem; }
+    .contact-box p:last-child { margin-bottom: 0; }
+
+    footer {
+      padding: 2rem 6%; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; background: var(--bg);
+    }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--fg); }
+    .footer-logo span { color: var(--accent); }
+    footer p, footer a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">NiON<span>lite</span></a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </nav>
+
+  <main>
+    <div class="page-eyebrow">Legal</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <p class="updated">Last updated: March 31, 2026</p>
+
+    <p class="intro">This Privacy Policy describes how NiONlite LLC ("NiONlite", "we", "us", or "our") collects, uses, and protects information when you use our mobile applications, including CUB Rates ("the App"). We are committed to handling your data responsibly and transparently.</p>
+
+    <h2>Information We Collect</h2>
+    <p>When you create an account or use the App, we may collect the following:</p>
+    <ul>
+      <li>Email address — used for account creation, login, and support</li>
+      <li>Subscription and billing status — managed via Google Play or Apple App Store</li>
+      <li>App preferences — including saved favorites and rate alert settings</li>
+      <li>General usage data — to improve the App's performance and reliability</li>
+    </ul>
+    <p>We do <strong>not</strong> collect your name, physical address, phone number, or payment card details. All billing is handled directly and securely by Google Play or the Apple App Store.</p>
+
+    <div class="divider"></div>
+
+    <h2>How We Use Your Information</h2>
+    <p>We use the information we collect solely to provide and improve the App:</p>
+    <ul>
+      <li>To provide, operate, and maintain the App</li>
+      <li>To verify your subscription status and unlock premium features</li>
+      <li>To send rate drop alerts you have configured</li>
+      <li>To respond to support requests sent to support@nionlite.com</li>
+      <li>To improve the App based on usage patterns</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+
+    <div class="divider"></div>
+
+    <h2>Data Storage & Security</h2>
+    <p>Your account data is stored securely using <strong>Google Firebase (Firestore)</strong>, a cloud database service operated by Google LLC. Data is stored in the United States. We use Firebase Authentication for secure sign-in and Firebase App Check to protect our backend services from unauthorized access.</p>
+    <p>We implement industry-standard security measures including encrypted data transmission (HTTPS) and token-based authentication.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>The App uses the following third-party services, each governed by their own privacy policies:</p>
+    <ul>
+      <li><strong>Google Firebase</strong> — authentication, database, and cloud functions</li>
+      <li><strong>Google Play Billing</strong> — in-app subscription processing (Android)</li>
+      <li><strong>Apple App Store / StoreKit</strong> — in-app subscription processing (iOS)</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>Data Retention & Deletion</h2>
+    <p>We retain your data only for as long as your account is active or as needed to provide the App's services. You may request deletion of your account and all associated data at any time by contacting us at <a href="mailto:support@nionlite.com">support@nionlite.com</a>. We will process your request within 30 days.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have rights regarding your personal data, including the right to access, correct, or delete the information we hold about you. To exercise any of these rights, please contact us at <a href="mailto:support@nionlite.com">support@nionlite.com</a>.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes your acceptance of the updated policy.</p>
+
+    <div class="divider"></div>
+
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your data, please reach out:</p>
+    <div class="contact-box">
+      <p><strong>NiONlite LLC</strong></p>
+      <p>Email: <a href="mailto:support@nionlite.com">support@nionlite.com</a></p>
+      <p>Website: <a href="https://nionlite.com">nionlite.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025 NiONlite LLC. All rights reserved.</p>
+    <a href="index.html">Home</a>
+  </footer>
+</body>
+</html>
