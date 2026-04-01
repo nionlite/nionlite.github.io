@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credit Unions vs Banks: Who Offers Better Mortgage Rates? — NiONlite</title>
+  <meta name="description" content="Credit unions consistently beat banks on mortgage rates. We compare 30-year fixed rates across major banks and credit unions so you can make the right choice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#f7f5f2; --bg2:#edeae5; --fg:#1c1c1c; --mid:#7a7469; --accent:#8b2635; --accent2:#b54455; --border:rgba(28,28,28,0.1); }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--fg); }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 6%; background: rgba(247,245,242,0.95); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; letter-spacing: 0.06em; color: var(--fg); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .back-link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; transition: color 0.2s; }
+    .back-link:hover { color: var(--accent); }
+
+    .article-hero { background: var(--bg2); padding: 5rem 6% 4rem; border-bottom: 1px solid var(--border); }
+    .article-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
+    .article-tag::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent); }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 300; line-height: 1.1; color: var(--fg); max-width: 800px; margin-bottom: 1.4rem; }
+    h1 em { font-style: italic; color: var(--accent); }
+    .article-meta { font-size: 0.8rem; color: var(--mid); display: flex; gap: 1.5rem; }
+
+    main { max-width: 760px; margin: 0 auto; padding: 4rem 6% 6rem; }
+
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color: var(--fg); margin: 2.8rem 0 1rem; border-left: 2px solid var(--accent); padding-left: 1rem; }
+    h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--fg); margin: 2rem 0 0.7rem; }
+    p { font-size: 0.97rem; font-weight: 300; line-height: 1.9; color: var(--mid); margin-bottom: 1.2rem; }
+    p strong { color: var(--fg); font-weight: 500; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .lead { font-size: 1.1rem; line-height: 1.85; color: var(--fg); font-weight: 300; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.88rem; }
+    .comparison-table th { background: var(--fg); color: var(--bg); padding: 0.9rem 1rem; text-align: left; font-weight: 500; letter-spacing: 0.06em; font-size: 0.78rem; text-transform: uppercase; }
+    .comparison-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); color: var(--mid); font-weight: 300; }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table tr:nth-child(even) td { background: var(--bg2); }
+    .comparison-table .winner { color: var(--accent); font-weight: 500; }
+
+    .highlight-box { background: var(--bg2); border-left: 3px solid var(--accent); padding: 1.5rem 1.8rem; margin: 2rem 0; }
+    .highlight-box p { margin-bottom: 0; color: var(--fg); font-size: 0.95rem; }
+
+    ul.article-list { list-style: none; margin: 0.5rem 0 1.5rem; }
+    ul.article-list li { font-size: 0.95rem; font-weight: 300; line-height: 1.8; color: var(--mid); padding: 0.5rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 0.8rem; }
+    ul.article-list li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+    ul.article-list li:last-child { border-bottom: none; }
+
+    .cta-box { margin-top: 3rem; padding: 2.5rem; background: var(--fg); color: var(--bg); text-align: center; }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--bg); margin-bottom: 0.6rem; }
+    .cta-box p { color: rgba(247,245,242,0.7); margin-bottom: 1.5rem; font-size: 0.9rem; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; background: var(--accent); color: white; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .cta-btn:hover { background: var(--accent2); text-decoration: none; }
+
+    .related { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--fg); margin-bottom: 1.2rem; }
+    .related-links { display: flex; flex-direction: column; gap: 0.8rem; }
+    .related-links a { font-size: 0.88rem; color: var(--accent); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .related-links a:hover { text-decoration: underline; }
+
+    footer { padding: 2rem 6%; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--fg); }
+    .footer-logo span { color: var(--accent); }
+    footer p, footer a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">NiON<span>lite</span></a>
+    <a href="../index.html#blog" class="back-link">← Back to Blog</a>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-tag">Mortgage Rates</div>
+    <h1>Credit Unions vs Banks: Who Offers <em>Better Mortgage Rates?</em></h1>
+    <div class="article-meta">
+      <span>March 2026</span>
+      <span>5 min read</span>
+    </div>
+  </div>
+
+  <main>
+    <p class="lead">When shopping for a mortgage, most Americans walk into the nearest bank branch or click on a big lender's website. But there's a better option that millions of homebuyers overlook: credit unions. Our data tracking 40+ credit unions daily shows that credit unions consistently offer mortgage rates 0.25% to 0.75% lower than major banks — a difference that adds up to tens of thousands of dollars over the life of a loan.</p>
+
+    <h2>Why Credit Unions Offer Lower Rates</h2>
+    <p>Credit unions are <strong>not-for-profit financial cooperatives</strong>. Unlike banks, they don't have shareholders demanding profit — any earnings are returned to members in the form of lower rates, lower fees, and better terms. This structural difference is why credit union mortgage rates are consistently lower.</p>
+    <p>Banks, on the other hand, are for-profit institutions that need to generate returns for shareholders. Mortgage rates are one of the primary ways banks make money, and that profit motive results in higher rates for borrowers.</p>
+
+    <div class="highlight-box">
+      <p>On a $400,000 30-year fixed mortgage, a rate of 6.375% vs 6.875% saves approximately <strong>$128 per month</strong> — or over <strong>$46,000 across the life of the loan.</strong></p>
+    </div>
+
+    <h2>Rate Comparison: Credit Unions vs Major Banks</h2>
+    <p>Here's a snapshot of how credit union 30-year fixed rates compare to major banks (data tracked by CUB Rates, March 2026):</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr><th>Institution</th><th>Type</th><th>30-Yr Fixed Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="winner">PenFed Credit Union</td><td>Credit Union</td><td class="winner">6.375%</td></tr>
+        <tr><td class="winner">Navy Federal Credit Union</td><td>Credit Union</td><td class="winner">6.500%</td></tr>
+        <tr><td class="winner">First Tech Federal CU</td><td>Credit Union</td><td class="winner">6.490%</td></tr>
+        <tr><td>JPMorgan Chase</td><td>Bank</td><td>6.875%</td></tr>
+        <tr><td>Bank of America</td><td>Bank</td><td>6.990%</td></tr>
+        <tr><td>Wells Fargo</td><td>Bank</td><td>6.875%</td></tr>
+      </tbody>
+    </table>
+
+    <p>The pattern is clear: credit unions are routinely offering rates 0.375% to 0.615% below major banks on the same loan type.</p>
+
+    <h2>The Catch: Membership Requirements</h2>
+    <p>Credit unions require membership, and membership eligibility varies. However, many credit unions are more accessible than people realize:</p>
+    <ul class="article-list">
+      <li><strong>Navy Federal</strong> — open to military members, veterans, and their families</li>
+      <li><strong>PenFed</strong> — open to anyone who makes a small donation to a partner charity</li>
+      <li><strong>Alliant</strong> — open to anyone who joins a partner organization (often free)</li>
+      <li><strong>First Tech</strong> — open to tech industry employees and their families</li>
+      <li><strong>Local credit unions</strong> — often open to anyone who lives or works in a certain county or state</li>
+    </ul>
+    <p>Many people are surprised to discover they qualify for multiple credit unions. It's worth checking eligibility before assuming you can't join.</p>
+
+    <h2>Other Advantages of Credit Union Mortgages</h2>
+    <p>Beyond rates, credit unions often offer additional advantages:</p>
+    <ul class="article-list">
+      <li>Lower origination fees and closing costs</li>
+      <li>More flexible underwriting — better for self-employed borrowers or those with non-traditional income</li>
+      <li>Personalized service — you're dealing with a member-owned institution, not a faceless corporation</li>
+      <li>Portfolio lending — some credit unions keep loans in-house rather than selling to the secondary market</li>
+    </ul>
+
+    <h2>How to Find the Best Credit Union Rate</h2>
+    <p>The challenge with credit unions is that their rates aren't always easy to find in one place. Unlike banks that advertise heavily, credit unions often publish rates quietly on their websites — and those rates change frequently.</p>
+    <p>That's exactly why we built <strong>CUB Rates</strong> — to track real, published mortgage rates from 40+ credit unions across the US, updated daily. Instead of visiting 40 different websites, you can compare all of them in one place and set alerts for when rates drop below your target.</p>
+
+    <div class="cta-box">
+      <h3>Track Credit Union Rates Daily</h3>
+      <p>CUB Rates tracks 40+ credit unions across the US — real rates, updated every day.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" class="cta-btn">Download CUB Rates Free →</a>
+    </div>
+
+    <div class="related">
+      <h3>Related Articles</h3>
+      <div class="related-links">
+        <a href="best-credit-union-mortgage-rates-virginia.html">→ Best Credit Union Mortgage Rates in Virginia (2026)</a>
+        <a href="how-to-get-lowest-mortgage-rate.html">→ 5 Ways to Get the Lowest Mortgage Rate Possible</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025 NiONlite LLC. All rights reserved.</p>
+    <a href="../privacy.html">Privacy Policy</a>
+  </footer>
+</body>
+</html>
