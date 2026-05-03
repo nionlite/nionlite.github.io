@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal - NiONlite</title>
+  <meta name="description" content="NiONlite LLC legal center with app specific privacy policies and terms of use." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f7f5f2;
+      --bg2: #edeae5;
+      --fg: #1c1c1c;
+      --mid: #7a7469;
+      --accent: #8b2635;
+      --accent2: #b54455;
+      --border: rgba(28,28,28,0.1);
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--fg); }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 6%; background: var(--bg); border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; letter-spacing: 0.06em; color: var(--fg); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .back-link { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); text-decoration: none; }
+    .back-link:hover { color: var(--accent); }
+    main { max-width: 1040px; margin: 0 auto; padding: 5rem 6% 7rem; }
+    .page-eyebrow { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem; }
+    .page-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4.4rem); font-weight: 300; line-height: 1.08; margin-bottom: 1rem; }
+    h1 em { font-style: italic; color: var(--accent); }
+    .intro { max-width: 680px; font-size: 1rem; font-weight: 300; line-height: 1.85; color: var(--mid); margin-bottom: 3rem; }
+    .app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+    .app-card {
+      border: 1px solid var(--border); background: var(--bg2); padding: 2rem;
+      display: flex; flex-direction: column; gap: 1.25rem; min-height: 260px;
+    }
+    .app-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; }
+    .app-card p { color: var(--mid); font-weight: 300; line-height: 1.75; font-size: 0.95rem; }
+    .status { display: inline-flex; align-self: flex-start; border: 1px solid rgba(139,38,53,0.25); color: var(--accent); padding: 0.35rem 0.75rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: auto; }
+    .legal-link {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 42px;
+      padding: 0.7rem 1rem; background: var(--fg); color: var(--bg); text-decoration: none;
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .legal-link.secondary { background: transparent; color: var(--fg); border: 1px solid var(--border); }
+    .legal-link:hover { background: var(--accent); color: var(--bg); }
+    .note { margin-top: 2.5rem; padding: 1.5rem; border-left: 3px solid var(--accent); background: rgba(139,38,53,0.05); color: var(--mid); font-size: 0.9rem; line-height: 1.7; }
+    footer { padding: 2rem 6%; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: var(--bg); }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--fg); }
+    .footer-logo span { color: var(--accent); }
+    footer p, footer a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+    .footer-links { display: flex; gap: 1.4rem; }
+    @media (max-width: 760px) {
+      .app-grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">NiON<span>lite</span></a>
+    <a href="index.html" class="back-link">Back to Home</a>
+  </nav>
+
+  <main>
+    <div class="page-eyebrow">Legal Center</div>
+    <h1>App specific <em>policies.</em></h1>
+    <p class="intro">Each NiONlite app has its own privacy policy and terms of use because each app handles data differently. Choose an app below to view the documents that apply to that product.</p>
+
+    <section class="app-grid" aria-label="NiONlite apps">
+      <article class="app-card">
+        <span class="status">iOS</span>
+        <h2>Plate Atlas</h2>
+        <p>AI menu dish guide and food journal for understanding ingredients, dietary fit, saved dishes, safe-for-me notes, restaurant context, and optional Pro features.</p>
+        <div class="links">
+          <a class="legal-link" href="plate-atlas-privacy.html">Privacy Policy</a>
+          <a class="legal-link secondary" href="plate-atlas-terms.html">Terms of Use</a>
+        </div>
+      </article>
+
+      <article class="app-card">
+        <span class="status">iOS and Android</span>
+        <h2>CUB Rates</h2>
+        <p>Credit union mortgage rate tracker with account, subscription, favorites, alerts, and rate-related app preferences.</p>
+        <div class="links">
+          <a class="legal-link" href="privacy.html">Privacy Policy</a>
+          <a class="legal-link secondary" href="terms.html">Terms of Use</a>
+        </div>
+      </article>
+    </section>
+
+    <p class="note">For privacy requests, data access, data deletion, or legal questions, contact support@nionlite.com and include the app name in your message.</p>
+  </main>
+
+  <footer>
+    <div class="footer-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025-2026 NiONlite LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="mailto:support@nionlite.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
