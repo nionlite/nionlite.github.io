@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plate Atlas - AI Menu Guide & Food Journal</title>
+  <meta name="description" content="Plate Atlas is an AI menu dish guide and food journal for understanding ingredients, dietary fit, saved dishes, and restaurants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #171717;
+      --paper: #fffaf4;
+      --cream: #f6efe6;
+      --tomato: #c4452f;
+      --leaf: #1f8a5b;
+      --gold: #d79a2b;
+      --blue: #2d6f8f;
+      --muted: #6e675d;
+      --line: rgba(23,23,23,0.12);
+      --shadow: 0 24px 70px rgba(36, 25, 16, 0.16);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--paper); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: fixed; inset: 0 0 auto; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 6%; background: rgba(255,250,244,0.92); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-weight: 700; letter-spacing: 0.03em; }
+    .brand img { width: 34px; height: 34px; border-radius: 8px; box-shadow: 0 8px 20px rgba(196,69,47,0.18); }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; }
+    .nav-links a { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .nav-links a:hover { color: var(--tomato); }
+    .hero {
+      position: relative; min-height: 94vh; display: flex; align-items: center; justify-content: center;
+      padding: 8rem 6% 4rem; overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(196,69,47,0.12), transparent 32%),
+        linear-gradient(225deg, rgba(31,138,91,0.13), transparent 34%),
+        var(--paper);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.38;
+      background-image: url("plate-atlas-icon.png");
+      background-size: 520px 520px; background-position: 92% 16%; background-repeat: no-repeat;
+      filter: saturate(1.08);
+    }
+    .hero-inner { position: relative; z-index: 1; width: min(1120px, 100%); display: grid; grid-template-columns: 1fr; justify-items: center; text-align: center; }
+    .app-icon { width: 112px; height: 112px; border-radius: 25px; box-shadow: var(--shadow); margin-bottom: 1.4rem; }
+    .eyebrow { color: var(--tomato); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 10vw, 8.2rem); line-height: 0.92; font-weight: 700; letter-spacing: 0; margin-bottom: 1.2rem; }
+    .hero-sub { max-width: 760px; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.7; color: var(--muted); font-weight: 300; margin-bottom: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.85rem; margin-bottom: 2.5rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+      padding: 0.9rem 1.25rem; border: 1px solid var(--line); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; background: var(--ink); color: var(--paper);
+    }
+    .btn.secondary { background: transparent; color: var(--ink); }
+    .btn:hover { background: var(--tomato); color: var(--paper); border-color: var(--tomato); }
+    .hero-preview {
+      width: min(860px, 100%); display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 1rem; align-items: stretch;
+      margin-top: 0.5rem;
+    }
+    .scan-panel, .phone {
+      border: 1px solid var(--line); background: rgba(255,255,255,0.72); box-shadow: var(--shadow);
+    }
+    .scan-panel { padding: 1.5rem; text-align: left; display: flex; flex-direction: column; justify-content: center; min-height: 320px; }
+    .scan-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; color: var(--tomato); text-transform: uppercase; margin-bottom: 0.9rem; }
+    .menu-line { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1; margin-bottom: 1rem; }
+    .quick-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-top: 1.2rem; }
+    .fact { border-top: 2px solid var(--leaf); padding-top: 0.65rem; }
+    .fact strong { display: block; font-size: 1rem; margin-bottom: 0.2rem; }
+    .fact span { color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
+    .phone { border-radius: 34px; background: #181716; padding: 0.9rem; min-height: 320px; }
+    .phone-screen { height: 100%; min-height: 300px; border-radius: 24px; background: #fffdf9; padding: 1.2rem; text-align: left; overflow: hidden; }
+    .safe-pill { display: inline-flex; background: rgba(31,138,91,0.14); color: var(--leaf); padding: 0.48rem 0.75rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; margin-bottom: 1rem; }
+    .phone h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.1rem; line-height: 1; margin-bottom: 0.75rem; }
+    .mini-section { margin-top: 1rem; }
+    .mini-section h3 { font-size: 0.78rem; margin-bottom: 0.4rem; }
+    .mini-section p { color: var(--muted); font-size: 0.75rem; line-height: 1.55; }
+    .taste { display: grid; gap: 0.35rem; margin-top: 0.55rem; }
+    .bar { height: 7px; border-radius: 999px; background: #eee8df; overflow: hidden; }
+    .bar span { display: block; height: 100%; background: var(--gold); }
+    section { padding: 6rem 6%; }
+    .section-inner { width: min(1120px, 100%); margin: 0 auto; }
+    .section-head { max-width: 700px; margin-bottom: 2rem; }
+    .section-head h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1; margin-bottom: 0.85rem; }
+    .section-head p { color: var(--muted); line-height: 1.75; font-size: 1rem; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .feature { min-height: 230px; padding: 1.5rem; border: 1px solid var(--line); background: #fffdf9; }
+    .feature .num { color: var(--tomato); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.13em; margin-bottom: 1.1rem; }
+    .feature h3 { font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .feature p { color: var(--muted); line-height: 1.7; font-size: 0.92rem; }
+    .journal { background: #17251d; color: var(--paper); }
+    .journal .section-head p { color: rgba(255,250,244,0.72); }
+    .journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: stretch; }
+    .map-demo, .note-demo { border: 1px solid rgba(255,250,244,0.16); background: rgba(255,250,244,0.06); padding: 1.5rem; min-height: 300px; }
+    .map-demo { position: relative; overflow: hidden; }
+    .map-grid { position: absolute; inset: 0; opacity: 0.22; background-image: linear-gradient(rgba(255,250,244,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,250,244,0.2) 1px, transparent 1px); background-size: 48px 48px; }
+    .pin { position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 9px rgba(215,154,43,0.16); }
+    .pin.one { top: 28%; left: 30%; }
+    .pin.two { top: 54%; left: 62%; background: var(--tomato); }
+    .pin.three { top: 70%; left: 42%; background: var(--leaf); }
+    .map-caption { position: relative; z-index: 1; max-width: 360px; margin-top: 11rem; }
+    .map-caption h3, .note-demo h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 0.6rem; }
+    .map-caption p, .note-demo p { color: rgba(255,250,244,0.72); line-height: 1.7; }
+    .note-line { margin-top: 1rem; padding: 0.9rem 0; border-bottom: 1px solid rgba(255,250,244,0.14); }
+    .note-line strong { display: block; margin-bottom: 0.25rem; }
+    .note-line span { color: rgba(255,250,244,0.7); font-size: 0.9rem; }
+    .pro { background: linear-gradient(135deg, rgba(196,69,47,0.1), rgba(45,111,143,0.12)), var(--cream); }
+    .pro-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .pro-item { padding: 1.25rem; background: rgba(255,255,255,0.58); border: 1px solid var(--line); min-height: 150px; }
+    .pro-item strong { display: block; margin-bottom: 0.5rem; }
+    .pro-item span { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    .safety { background: var(--paper); }
+    .safety-box { border-left: 4px solid var(--tomato); padding: 1.5rem 2rem; background: #fffdf9; box-shadow: 0 10px 34px rgba(36,25,16,0.08); }
+    .safety-box p { color: var(--muted); line-height: 1.8; }
+    .final-cta { text-align: center; background: var(--ink); color: var(--paper); padding: 5rem 6%; }
+    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; margin-bottom: 1rem; }
+    .final-cta p { color: rgba(255,250,244,0.72); max-width: 640px; margin: 0 auto 1.8rem; line-height: 1.75; }
+    .final-cta .btn { background: var(--paper); color: var(--ink); }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 2rem 6%; background: #111; color: rgba(255,250,244,0.76); }
+    footer a { color: rgba(255,250,244,0.76); margin-left: 1rem; }
+    footer a:hover { color: var(--paper); }
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+      .hero-preview, .journal-grid { grid-template-columns: 1fr; }
+      .feature-grid, .pro-list { grid-template-columns: 1fr; }
+      .quick-facts { grid-template-columns: 1fr; }
+      section { padding: 4rem 6%; }
+      h1 { font-size: clamp(3.3rem, 18vw, 5rem); }
+      .hero::before { background-size: 360px 360px; background-position: center 5rem; opacity: 0.16; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="brand">
+      <img src="plate-atlas-icon.png" alt="Plate Atlas app icon" />
+      <span>Plate Atlas</span>
+    </a>
+    <div class="nav-links" aria-label="Page navigation">
+      <a href="#features">Features</a>
+      <a href="#journal">Journal</a>
+      <a href="#pro">Pro</a>
+      <a href="legal.html">Legal</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="app-icon" src="plate-atlas-icon.png" alt="Plate Atlas app icon" />
+      <div class="eyebrow">AI Menu Guide & Food Journal</div>
+      <h1>Plate Atlas</h1>
+      <p class="hero-sub">Know what a dish is, what may be inside it, and whether it fits the way you eat before you order. Then remember the dishes and restaurants worth coming back to.</p>
+      <div class="cta-row">
+        <a class="btn" href="#download">iOS Coming Soon</a>
+        <a class="btn secondary" href="#download">Google Play Coming Soon</a>
+      </div>
+      <div class="hero-preview" aria-label="Plate Atlas product preview">
+        <div class="scan-panel">
+          <div class="scan-label">From the menu</div>
+          <div class="menu-line">Caprese sandwich</div>
+          <p class="hero-sub" style="font-size:0.98rem;margin:0;color:var(--muted);">A quick read on likely ingredients, preparation, taste profile, and dietary fit.</p>
+          <div class="quick-facts">
+            <div class="fact"><strong>Scan</strong><span>Camera or text search</span></div>
+            <div class="fact"><strong>Check</strong><span>Allergens and preferences</span></div>
+            <div class="fact"><strong>Save</strong><span>Dishes and restaurants</span></div>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen">
+            <span class="safe-pill">Safe for you</span>
+            <h2>Caprese sandwich</h2>
+            <div class="mini-section">
+              <h3>Ingredients</h3>
+              <p>Mozzarella, tomato, basil, olive oil, bread, and balsamic glaze are commonly used.</p>
+            </div>
+            <div class="mini-section">
+              <h3>Preparation</h3>
+              <p>Usually layered fresh and served cold or lightly toasted. Verify pesto, bread, and cross-contact with staff.</p>
+            </div>
+            <div class="mini-section">
+              <h3>Taste profile</h3>
+              <div class="taste">
+                <div class="bar"><span style="width:72%"></span></div>
+                <div class="bar"><span style="width:48%;background:var(--leaf)"></span></div>
+                <div class="bar"><span style="width:26%;background:var(--tomato)"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Made for real menu moments.</h2>
+        <p>Plate Atlas is built for the moment when a menu looks good, unfamiliar, or risky, and you need a fast explanation that is personal to you.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="num">01</div>
+          <h3>Scan or type a dish</h3>
+          <p>Point at a menu, capture text, or type a dish name. Plate Atlas turns restaurant menu language into a practical dish explanation.</p>
+        </article>
+        <article class="feature">
+          <div class="num">02</div>
+          <h3>Understand likely ingredients</h3>
+          <p>Get likely ingredients, preparation style, taste profile, cuisine context, and hidden ingredient warnings when the dish commonly includes extras.</p>
+        </article>
+        <article class="feature">
+          <div class="num">03</div>
+          <h3>Compare with your profile</h3>
+          <p>Set diet preferences, allergens, custom allergens, disliked ingredients, language, and strictness so results match the way you eat.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="journal" id="journal">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Your food memory, mapped.</h2>
+        <p>Plate Atlas is more than a scanner. It becomes a lightweight food journal for the dishes and restaurants that worked for you.</p>
+      </div>
+      <div class="journal-grid">
+        <div class="map-demo">
+          <div class="map-grid"></div>
+          <span class="pin one"></span>
+          <span class="pin two"></span>
+          <span class="pin three"></span>
+          <div class="map-caption">
+            <h3>Saved and safe places</h3>
+            <p>Keep a map of restaurants connected to saved dishes and safe-for-me meals, so good food decisions are easier to repeat.</p>
+          </div>
+        </div>
+        <div class="note-demo">
+          <h3>Post-meal notes</h3>
+          <p>Remember what actually happened after eating, not just what the menu promised.</p>
+          <div class="note-line"><strong>Safe for me</strong><span>Ordered without pesto. No issue after dinner.</span></div>
+          <div class="note-line"><strong>Saved dish</strong><span>Ask for medium spice next time. Good vegetarian option.</span></div>
+          <div class="note-line"><strong>Restaurant context</strong><span>Staff knew ingredients and handled allergy questions well.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pro" id="pro">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Free to start. Pro when it becomes your companion.</h2>
+        <p>Use Plate Atlas for quick checks, then upgrade when you want the full food memory layer without ads or tight limits.</p>
+      </div>
+      <div class="pro-list">
+        <div class="pro-item"><strong>No ads</strong><span>Remove the free banner experience.</span></div>
+        <div class="pro-item"><strong>More journal depth</strong><span>Unlock richer saved dish, restaurant, and post-meal note workflows.</span></div>
+        <div class="pro-item"><strong>Map features</strong><span>See restaurants connected to your saved and safe dishes.</span></div>
+        <div class="pro-item"><strong>Advanced profile</strong><span>Use custom allergens and disliked ingredients for more personal checks.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safety">
+    <div class="section-inner">
+      <div class="safety-box">
+        <p><strong>Food safety disclaimer:</strong> Plate Atlas provides AI estimates only. Restaurant recipes, substitutions, cooking oils, sauces, and cross-contact can vary. Always verify ingredients, allergens, and preparation with restaurant staff before eating, especially if you have allergies or medical dietary restrictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" id="download">
+    <h2>Take the guesswork off the menu.</h2>
+    <p>Plate Atlas is coming soon for iPhone and Android. Check back for store links as launch approaches.</p>
+    <div class="cta-row">
+      <span class="btn">iOS Coming Soon</span>
+      <span class="btn secondary">Google Play Coming Soon</span>
+    </div>
+  </section>
+
+  <footer>
+    <div>NiONlite LLC</div>
+    <div>
+      <a href="plate-atlas-privacy.html">Privacy</a>
+      <a href="plate-atlas-terms.html">Terms</a>
+      <a href="index.html">Home</a>
+    </div>
+  </footer>
+</body>
+</html>
