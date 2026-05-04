@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NiONlite — Mobile App Development</title>
-  <meta name="description" content="NiONlite builds high-quality mobile applications. Creator of CUB Rates, the credit union mortgage rate tracker." />
+  <meta name="description" content="NiONlite builds high-quality mobile applications including Plate Atlas and CUB Rates." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -99,10 +99,12 @@
 
     /* ── APP ── */
     #app { background: var(--bg); }
+    .apps-stack { display: flex; flex-direction: column; gap: 2rem; max-width: 1100px; }
     .app-card { max-width: 1100px; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; border: 1px solid var(--border); padding: 3.5rem; position: relative; background: var(--bg); box-shadow: 0 8px 40px rgba(0,0,0,0.06); }
     .app-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent2), transparent); }
     .app-live { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.9rem; border: 1px solid rgba(139,38,53,0.25); font-size: 0.72rem; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 1.4rem; background: rgba(139,38,53,0.04); }
     .app-live::before { content: ''; width: 6px; height: 6px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
+    .app-live.soon::before { background: #f59e0b; animation: none; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
     .app-name { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 400; color: var(--fg); margin-bottom: 0.6rem; line-height: 1.15; }
     .app-sub { font-size: 0.88rem; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 1.4rem; }
@@ -111,6 +113,7 @@
     .feats li { font-size: 0.88rem; color: var(--fg); display: flex; align-items: center; gap: 0.7rem; }
     .feats li::before { content: '—'; color: var(--accent); flex-shrink: 0; }
     .app-btns { display: flex; flex-direction: column; gap: 0.9rem; align-items: flex-start; }
+    .btn-disabled { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 2rem; border: 1px solid var(--border); color: var(--mid); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; background: rgba(255,255,255,0.35); cursor: default; }
 
     /* phone mockup */
     .phone { width: 220px; height: 420px; border: 2px solid var(--border); border-radius: 28px; position: relative; background: var(--fg); overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.15); margin: 0 auto; }
@@ -121,6 +124,10 @@
     .p-row { display: flex; justify-content: space-between; padding: 0.45rem 0.5rem; border-bottom: 1px solid var(--border); }
     .p-bank { font-size: 0.48rem; color: var(--mid); }
     .p-rate { font-size: 0.6rem; color: var(--fg); font-weight: 600; font-family: 'Cormorant Garamond', serif; }
+    .p-dish { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--fg); margin: 0.5rem 0; }
+    .p-pill { display: inline-flex; align-items: center; padding: 0.28rem 0.55rem; border-radius: 999px; background: rgba(74,222,128,0.18); color: #15803d; font-size: 0.52rem; font-weight: 600; margin-bottom: 0.65rem; }
+    .p-section { font-size: 0.55rem; font-weight: 600; color: var(--fg); margin: 0.75rem 0 0.35rem; }
+    .p-copy { font-size: 0.5rem; line-height: 1.55; color: var(--mid); }
 
     /* ── BLOG ── */
     #blog { background: var(--bg2); }
@@ -184,7 +191,7 @@
     <a href="#" class="nav-logo">NiON<span>lite</span></a>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#app">Our App</a></li>
+      <li><a href="#app">Our Apps</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="legal.html">Legal</a></li>
@@ -197,7 +204,7 @@
   <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#about"   onclick="closeMobileNav()">About</a>
-    <a href="#app"     onclick="closeMobileNav()">Our App</a>
+    <a href="#app"     onclick="closeMobileNav()">Our Apps</a>
     <a href="#blog"    onclick="closeMobileNav()">Blog</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
     <a href="legal.html">Legal</a>
@@ -241,7 +248,44 @@
   <!-- APP -->
   <section id="app">
     <div class="sec-label reveal">Our Applications</div>
-    <div class="app-card reveal">
+    <div class="apps-stack">
+      <div class="app-card reveal">
+        <div>
+          <div class="app-live soon">Coming soon on iOS &amp; Google Play</div>
+          <div class="app-name">Plate Atlas</div>
+          <div class="app-sub">AI Menu Dish Guide &amp; Food Journal</div>
+          <p class="app-desc">Plate Atlas helps travelers, food lovers, and people with dietary preferences understand unfamiliar menu items before ordering. Scan or type a dish, get AI ingredient and preparation guidance, compare it with your profile, and remember the dishes and restaurants that worked for you.</p>
+          <ul class="feats">
+            <li><span>AI dish explanations from menu scans or text search</span></li>
+            <li><span>Diet, allergen, disliked ingredient, and custom warning checks</span></li>
+            <li><span>Saved dishes, safe-for-me tags, post-meal notes, and restaurant journal</span></li>
+            <li><span>Map view for restaurants connected to saved and safe dishes</span></li>
+            <li><span>Plate Atlas Pro unlocks advanced profile and journal features</span></li>
+          </ul>
+          <div class="app-btns">
+            <span class="btn-disabled">iOS Coming Soon</span>
+            <span class="btn-disabled">Google Play Coming Soon</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <div class="phone">
+            <div class="p-screen">
+              <div class="p-head">Plate Atlas</div>
+              <div class="p-dish">Caprese sandwich</div>
+              <div class="p-pill">Safe for you</div>
+              <div class="p-section">Ingredients</div>
+              <p class="p-copy">Mozzarella, tomato, basil, olive oil, bread, and balsamic glaze are commonly used.</p>
+              <div class="p-section">Preparation</div>
+              <p class="p-copy">Usually layered fresh and served cold or lightly toasted. Verify pesto, bread, and cross-contact with staff.</p>
+              <div class="p-section">Food journal</div>
+              <div class="p-row"><span class="p-bank">Saved</span><span class="p-rate">3</span></div>
+              <div class="p-row"><span class="p-bank">Safe for me</span><span class="p-rate">2</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card reveal">
       <div>
         <div class="app-live">Live on iOS &amp; Android</div>
         <div class="app-name">CUB Rates</div>
@@ -279,6 +323,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -333,6 +378,14 @@
         </div>
       </div>
       <div class="c-links">
+        <a href="#app" class="c-link">
+          <div><span class="c-link-main">Plate Atlas on the App Store</span><span class="c-link-sub">Coming soon for iPhone</span></div>
+          <span class="arr">&#8594;</span>
+        </a>
+        <a href="#app" class="c-link">
+          <div><span class="c-link-main">Plate Atlas on Google Play</span><span class="c-link-sub">Coming soon for Android</span></div>
+          <span class="arr">&#8594;</span>
+        </a>
         <a href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" class="c-link">
           <div><span class="c-link-main">CUB Rates on the App Store</span><span class="c-link-sub">Download the app for iPhone</span></div>
           <span class="arr">&#8594;</span>
