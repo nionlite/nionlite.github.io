@@ -61,9 +61,13 @@
   <main>
     <div class="page-eyebrow">Plate Atlas</div>
     <h1>Privacy <em>Policy</em></h1>
-    <p class="updated">Last updated: May 5, 2026</p>
+    <p class="updated">Last updated: May 19, 2026</p>
 
-    <p class="intro">This Privacy Policy explains how NiONlite LLC ("NiONlite", "we", "us", or "our") collects, uses, stores, and protects information when you use Plate Atlas ("Plate Atlas" or the "App"). Plate Atlas is an AI menu dish guide and food journal that helps users understand menu items, dietary fit, saved dishes, safe-for-me notes, and restaurant context.</p>
+    <p class="intro">This Privacy Policy explains how NiONlite LLC ("NiONlite", "we", "us", or "our") collects, uses, stores, and protects information when you use Plate Atlas ("Plate Atlas" or the "App") on iOS, iPadOS, Android, the Apple App Store, Google Play, TestFlight, or Google Play testing tracks. Plate Atlas is an AI menu dish guide and food journal that helps users understand menu items, dietary fit, saved dishes, safe-for-me notes, and restaurant context.</p>
+
+    <div class="highlight-box">
+      <p><strong>Plain-language summary:</strong> NiONlite does not require an account and does not operate a user profile or food journal database for Plate Atlas. Your dietary profile, saved dishes, safe-for-me items, restaurant notes, and post-meal notes are stored on your device, in your private Apple iCloud account when iCloud sync is enabled, or in a backup file you choose to save to your own Google Drive or other storage provider. When you use AI features, the minimum needed dish/menu text and dietary settings are sent through our AI proxy only to provide the requested explanation and operate abuse prevention. For free users, Google AdMob may collect or process relevant advertising, device, usage, and performance data according to Google's policies.</p>
+    </div>
 
     <h2>1. Information We Collect</h2>
     <h3>Information You Provide</h3>
@@ -78,17 +82,19 @@
     <ul>
       <li><strong>Camera and photo content</strong>: when you choose to scan a menu or dish, the App uses camera/photo access to extract menu text. Camera and photo access is used only after you grant permission or choose a photo.</li>
       <li><strong>OCR confidence and language</strong>: the App may process recognized text confidence and detected language to improve the response.</li>
-      <li><strong>Location for restaurant discovery</strong>: with your permission, the App uses location and MapKit search to help find nearby restaurants. If you save a restaurant, restaurant details and coordinates may be stored with your saved dish.</li>
-      <li><strong>Purchase status</strong>: the App uses Apple StoreKit to determine whether Plate Atlas Pro is active.</li>
+      <li><strong>Location for restaurant discovery</strong>: with your permission, the App uses location and map/place search services to help find nearby restaurants. If you save a restaurant, restaurant details and coordinates may be stored with your saved dish.</li>
+      <li><strong>Purchase status</strong>: the App uses Apple StoreKit on Apple platforms and Google Play Billing on Android to determine whether Plate Atlas Pro is active.</li>
       <li><strong>Usage limits and security data</strong>: our AI proxy may process request metadata, app entitlement status, device/app integrity signals, IP address, and rate-limit counters to prevent abuse and operate free scan limits.</li>
-      <li><strong>Crash and diagnostic data</strong>: Apple may provide crash logs and diagnostics through App Store Connect or TestFlight.</li>
+      <li><strong>Crash and diagnostic data</strong>: Apple and Google may provide crash logs, diagnostics, app performance data, and testing feedback through App Store Connect, TestFlight, Google Play Console, or Google Play testing tracks.</li>
       <li><strong>Advertising data for free users</strong>: the free version may show Google AdMob banner ads. Google may process app-bounded device identifiers, device information, approximate location, app interaction data, app performance data, and ad performance data according to Google's policies.</li>
+      <li><strong>Backup files you choose to create</strong>: on Android, Pro users may export or restore a Plate Atlas backup file through the Android document picker. If you choose Google Drive or another storage provider, that provider stores the backup file under your account and policies.</li>
     </ul>
 
     <h3>Information We Do Not Intentionally Collect</h3>
     <ul>
       <li>We do not require you to create an account to use Plate Atlas.</li>
-      <li>We do not collect payment card numbers; purchases are handled by Apple.</li>
+      <li>We do not maintain a NiONlite-hosted database of your dietary profile, saved dishes, safe-for-me items, restaurant notes, or post-meal notes.</li>
+      <li>We do not collect payment card numbers; purchases are handled by Apple or Google depending on where you downloaded the App.</li>
       <li>We do not intentionally collect health records, medical diagnoses, or treatment information.</li>
       <li>We do not sell your personal information.</li>
     </ul>
@@ -116,30 +122,32 @@
     <p>Our AI proxy may route requests to third-party AI providers, including Google Gemini, Cloudflare Workers AI, and OpenAI, depending on availability and configuration. These providers process the request to return a dish explanation. We do not use your submitted menu text or dietary profile to build a user advertising profile.</p>
 
     <h2>4. Storage</h2>
-    <p>Plate Atlas stores your profile, scan history, saved dishes, safe-for-me tags, restaurants, and notes on your device using Apple's app storage technologies. When private iCloud sync is available for Plate Atlas, this data can also sync through your own Apple iCloud account using Apple's private CloudKit database so it can be restored on another device signed in to the same Apple ID.</p>
-    <p>NiONlite does not require you to create a separate account for this sync. If iCloud is unavailable, disabled, or not configured for the App, Plate Atlas keeps this data on the device only.</p>
+    <p>Plate Atlas stores your profile, scan history, saved dishes, safe-for-me tags, restaurants, and notes on your device using platform app storage. On Apple platforms, when private iCloud sync is available for Plate Atlas, this data can also sync through your own Apple iCloud account using Apple's private CloudKit database so it can be restored on another device signed in to the same Apple ID.</p>
+    <p>On Android, Plate Atlas may allow Pro users to manually export and restore a backup file through the Android document picker. If you choose Google Drive or another cloud storage provider as the destination, the backup file is stored in your own account with that provider. NiONlite does not require you to create a separate NiONlite account for this backup or sync workflow.</p>
+    <p>If iCloud, Android backup, Google Drive, or another selected storage provider is unavailable, disabled, deleted, or not configured, Plate Atlas keeps this data on the device only.</p>
 
     <h2>5. Third-Party Services</h2>
     <ul>
       <li><strong>Apple</strong>: App Store, TestFlight, StoreKit subscriptions, private iCloud/CloudKit sync, camera/photo/location permission prompts, MapKit, diagnostics, and crash reporting.</li>
       <li><strong>Cloudflare</strong>: AI proxy hosting, rate limiting, request security, and optional Workers AI fallback.</li>
-      <li><strong>Google</strong>: Gemini AI processing and AdMob banner ads for free users.</li>
+      <li><strong>Google</strong>: Google Play distribution and testing, Google Play Billing, Gemini AI processing, Google Maps or place search services on Android, optional user-selected Google Drive backup storage, Google Play diagnostics, and AdMob banner ads for free users.</li>
       <li><strong>OpenAI</strong>: optional AI fallback if configured by NiONlite.</li>
     </ul>
 
     <h2>6. Subscriptions and Payments</h2>
-    <p>Plate Atlas Pro purchases and subscription management are handled by Apple through your Apple ID. We receive subscription entitlement status from StoreKit, but we do not receive your full payment card information.</p>
+    <p>Plate Atlas Pro purchases and subscription management are handled by the app store where you downloaded the App. Apple handles App Store purchases through your Apple ID. Google handles Google Play purchases through your Google account and Google Play Billing. We receive subscription entitlement status from Apple or Google, but we do not receive your full payment card information.</p>
 
     <h2>7. Data Retention and Deletion</h2>
-    <p>Data stored on your device or in your private iCloud account remains there until you delete it in the App, reset your profile or history, uninstall the App, or manage it through Apple's iCloud controls. AI proxy rate-limit records and security logs may be kept for a limited period for abuse prevention, reliability, and legal compliance.</p>
-    <p>To request help accessing or deleting data associated with Plate Atlas, email <a href="mailto:support@nionlite.com">support@nionlite.com</a> with the subject line "Plate Atlas Privacy Request". Because Plate Atlas does not require a NiONlite account and uses your private iCloud account for sync, some data may exist only on your device or in your Apple account and may not be accessible to NiONlite.</p>
+    <p>Data stored on your device, in your private iCloud account, or in a backup file you choose to save remains there until you delete it in the App, reset your profile or history, uninstall the App, delete the backup file, or manage it through Apple, Google, Android, iCloud, Google Drive, or other selected storage controls. AI proxy rate-limit records and security logs may be kept for a limited period for abuse prevention, reliability, and legal compliance.</p>
+    <p>To request help accessing or deleting data associated with Plate Atlas, email <a href="mailto:support@nionlite.com">support@nionlite.com</a> with the subject line "Plate Atlas Privacy Request". Because Plate Atlas does not require a NiONlite account and may store data only on your device, in your private iCloud account, or in a user-selected backup file, some data may not be accessible to NiONlite.</p>
 
     <h2>8. Your Choices</h2>
     <ul>
-      <li>You can deny or later change camera, photo, and location permissions in iOS Settings.</li>
+      <li>You can deny or later change camera, photo, and location permissions in iOS Settings or Android Settings.</li>
       <li>You can edit or reset your dietary profile in the App.</li>
       <li>You can delete saved dishes, safe-for-me items, notes, and scan history in the App where available.</li>
-      <li>You can manage or cancel Plate Atlas Pro through your Apple ID subscriptions settings.</li>
+      <li>You can manage or cancel Plate Atlas Pro through your Apple ID subscription settings or Google Play subscription settings, depending on where you purchased it.</li>
+      <li>You can delete exported Android backup files from Google Drive or any other storage provider you selected.</li>
       <li>You can contact us for privacy requests at support@nionlite.com.</li>
     </ul>
 
