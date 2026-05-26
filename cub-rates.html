@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CUB Rates - Credit Union Mortgage Rate Tracker | NiONlite</title>
+  <meta name="description" content="CUB Rates tracks published mortgage rates from credit unions and banks, with one-year history charts, state filters, favorites, alerts, and calculator tools for premium members. Visit nionlite.com/cub-rates.html." />
+  <link rel="canonical" href="https://nionlite.com/cub-rates.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CUB Rates - Credit Union Mortgage Rate Tracker" />
+  <meta property="og:description" content="Compare real published mortgage rates from credit unions and banks at nionlite.com/cub-rates.html. Premium unlocks all lender rates, one-year charts, filters, favorites, alerts, and more." />
+  <meta property="og:url" content="https://nionlite.com/cub-rates.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CUB Rates - Credit Union Mortgage Rate Tracker" />
+  <meta name="twitter:description" content="Compare real published mortgage rates from credit unions and banks at nionlite.com/cub-rates.html with premium history charts, filters, alerts, and favorites." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CUB Rates",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "Credit union and bank mortgage rate tracker with published rates, one-year history charts, state filters, favorites, alerts, and mortgage calculator tools.",
+    "downloadUrl": [
+      "https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184",
+      "https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NiONlite LLC",
+      "url": "https://nionlite.com/"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f7f5f2;
+      --bg2: #edeae5;
+      --fg: #1c1c1c;
+      --mid: #746f67;
+      --accent: #8b2635;
+      --accent2: #b54455;
+      --blue: #174b73;
+      --green: #21735b;
+      --gold: #b8842d;
+      --line: rgba(28,28,28,0.1);
+      --panel: rgba(255,255,255,0.58);
+      --shadow: 0 24px 70px rgba(31, 35, 42, 0.14);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--fg); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: fixed; inset: 0 0 auto; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 6%;
+      background: rgba(247,245,242,0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.55rem; font-weight: 600; letter-spacing: 0.06em; color: var(--fg); }
+    .nav-logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+    nav ul a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); transition: color 0.2s; }
+    nav ul a:hover { color: var(--accent); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--fg); border-radius: 2px; transition: all 0.25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav {
+      display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+      flex-direction: column; padding: 0.5rem 6% 1.2rem;
+      background: rgba(247,245,242,0.98); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line);
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-size: 0.88rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
+    .mobile-nav a:last-child { border-bottom: 0; }
+
+    .hero {
+      position: relative; min-height: 92vh; display: grid; align-items: center;
+      padding: 6rem 6% 2rem; overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(23,75,115,0.08), transparent 34%),
+        linear-gradient(145deg, rgba(139,38,53,0.11), transparent 42%),
+        var(--bg);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(28,28,28,0.03) 79px, rgba(28,28,28,0.03) 80px);
+    }
+    .hero::after {
+      content: ""; position: absolute; top: 0; right: 0; width: 40%; height: 100%;
+      background: var(--bg2); clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%); pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; width: min(1180px, 100%); display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 4rem; align-items: center; }
+    .eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.7rem; }
+    .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--accent); }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 8vw, 7rem); line-height: 0.96; font-weight: 300; letter-spacing: 0; margin-bottom: 1.5rem; }
+    h1 strong { color: var(--accent); font-weight: 600; }
+    .hero-sub { max-width: 560px; font-size: 1.05rem; font-weight: 300; line-height: 1.78; color: var(--mid); margin-bottom: 2.2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.6rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      min-height: 48px; padding: 0.85rem 1.45rem;
+      background: var(--fg); color: var(--bg); border: 1px solid var(--fg);
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-1px); }
+    .btn.secondary { background: transparent; color: var(--fg); border-color: var(--line); }
+    .btn.secondary:hover { color: var(--bg); }
+    .trust-line { display: flex; flex-wrap: wrap; gap: 0.7rem; color: var(--mid); font-size: 0.82rem; }
+    .trust-line span { padding: 0.4rem 0.65rem; border: 1px solid var(--line); background: rgba(255,255,255,0.35); }
+
+    .phone-stage { position: relative; min-height: 548px; display: flex; align-items: center; justify-content: center; }
+    .phone {
+      width: min(350px, 84vw); height: 548px; border-radius: 32px;
+      background: #171717; padding: 14px; box-shadow: var(--shadow);
+      position: relative; z-index: 2; border: 1px solid rgba(255,255,255,0.14);
+    }
+    .phone::before { content: ""; position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 70px; height: 5px; border-radius: 999px; background: rgba(255,255,255,0.18); z-index: 4; }
+    .screen { height: 100%; border-radius: 24px; background: #fbfaf8; overflow: hidden; padding: 1.1rem; }
+    .screen-top { display: flex; justify-content: space-between; align-items: center; margin: 0.8rem 0 1rem; }
+    .screen-title { font-size: 0.7rem; color: var(--accent); font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+    .premium-pill { font-size: 0.62rem; color: #fff; background: var(--gold); padding: 0.35rem 0.5rem; border-radius: 999px; font-weight: 700; }
+    .rate-hero { padding: 0.8rem 0.9rem; background: #fff; border: 1px solid rgba(28,28,28,0.08); }
+    .rate-label { font-size: 0.64rem; color: var(--mid); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .rate-value { font-family: 'Cormorant Garamond', serif; font-size: 3.35rem; line-height: 0.92; color: var(--fg); }
+    .rate-value span { font-size: 1.7rem; color: var(--accent); }
+    .rate-meta { color: var(--green); font-size: 0.74rem; margin-top: 0.45rem; font-weight: 700; }
+    .chart { height: 126px; margin-top: 0.75rem; border: 1px solid rgba(28,28,28,0.08); background: linear-gradient(#fff, #f3f6f5); position: relative; overflow: hidden; }
+    .chart svg { width: 100%; height: 100%; display: block; }
+    .tip {
+      position: absolute; right: 18px; top: 36px; background: var(--fg); color: #fff;
+      padding: 0.45rem 0.58rem; font-size: 0.63rem; font-weight: 700; box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; margin: 0.62rem 0 0.74rem; }
+    .tabs span { text-align: center; font-size: 0.66rem; font-weight: 700; color: var(--mid); padding: 0.45rem 0; border: 1px solid rgba(28,28,28,0.08); background: #fff; }
+    .tabs span.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+    .lender-list { display: grid; gap: 0.48rem; }
+    .lender { display: grid; grid-template-columns: 1fr auto; gap: 0.5rem; padding: 0.55rem 0.65rem; background: #fff; border: 1px solid rgba(28,28,28,0.08); }
+    .lender strong { font-size: 0.74rem; }
+    .lender small { display: block; color: var(--mid); font-size: 0.62rem; margin-top: 0.2rem; }
+    .lender b { font-family: 'Cormorant Garamond', serif; color: var(--blue); font-size: 1.1rem; }
+    .floating-stat {
+      position: absolute; z-index: 3; width: 190px; padding: 1rem;
+      background: rgba(255,255,255,0.86); border: 1px solid var(--line); box-shadow: 0 16px 45px rgba(31,35,42,0.12);
+    }
+    .floating-stat strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2rem; line-height: 1; color: var(--accent); }
+    .floating-stat span { display: block; margin-top: 0.35rem; color: var(--mid); font-size: 0.75rem; line-height: 1.5; }
+    .floating-stat.one { top: 20px; left: 0; }
+    .floating-stat.two { bottom: 18px; right: 0; }
+
+    section { padding: 6.5rem 6%; position: relative; }
+    .section-inner { width: min(1120px, 100%); margin: 0 auto; }
+    .section-head { max-width: 760px; margin-bottom: 2.2rem; }
+    .sec-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.7rem; }
+    .sec-label::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.3rem, 5vw, 4.2rem); font-weight: 300; line-height: 1.08; margin-bottom: 1rem; }
+    h2 em { color: var(--accent); font-style: italic; }
+    .section-head p { color: var(--mid); line-height: 1.8; font-weight: 300; font-size: 1rem; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .feature { min-height: 230px; padding: 1.5rem; border: 1px solid var(--line); background: var(--panel); }
+    .feature .num { color: var(--accent); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.13em; margin-bottom: 1.1rem; }
+    .feature h3 { font-size: 1.06rem; margin-bottom: 0.7rem; }
+    .feature p { color: var(--mid); line-height: 1.72; font-size: 0.92rem; }
+
+    .data-section { background: var(--bg2); }
+    .data-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; align-items: stretch; }
+    .chart-panel, .calc-panel { border: 1px solid var(--line); background: rgba(255,255,255,0.48); padding: 1.5rem; min-height: 360px; }
+    .big-chart { height: 245px; background: #fff; border: 1px solid rgba(28,28,28,0.08); margin-top: 1.2rem; position: relative; overflow: hidden; }
+    .big-chart svg { width: 100%; height: 100%; display: block; }
+    .legend { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; color: var(--mid); font-size: 0.82rem; }
+    .legend span::before { content: ""; display: inline-block; width: 18px; height: 3px; margin-right: 0.45rem; vertical-align: middle; background: var(--accent); }
+    .legend span:nth-child(2)::before { background: var(--blue); }
+    .legend span:nth-child(3)::before { background: var(--green); }
+    .calc-row { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+    .calc-row small { color: var(--mid); font-size: 0.78rem; }
+    .calc-row strong { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--fg); }
+    .credit-union-card {
+      margin-top: 1rem; border: 1px solid var(--line); background: rgba(255,255,255,0.54);
+      display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; padding: 1.5rem;
+    }
+    .credit-union-card h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.08; margin-bottom: 0.85rem; }
+    .credit-union-card h3 em { color: var(--accent); font-style: italic; }
+    .credit-union-card p { color: var(--mid); line-height: 1.75; font-weight: 300; }
+    .benefit-list { display: grid; gap: 0.65rem; margin-top: 1.2rem; }
+    .benefit-list div { border-left: 3px solid var(--accent); padding-left: 0.85rem; color: var(--fg); font-size: 0.9rem; }
+    .benefit-list span { display: block; color: var(--mid); font-size: 0.82rem; margin-top: 0.18rem; line-height: 1.55; }
+    .savings-box { background: #fff; border: 1px solid rgba(28,28,28,0.08); padding: 1.2rem; align-self: stretch; }
+    .savings-title { color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    .savings-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+    .savings-metric { border: 1px solid var(--line); padding: 0.9rem; min-height: 105px; }
+    .savings-metric small { display: block; color: var(--mid); font-size: 0.72rem; line-height: 1.45; margin-bottom: 0.35rem; }
+    .savings-metric strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 2.15rem; line-height: 1; color: var(--fg); }
+    .savings-metric.highlight { background: rgba(33,115,91,0.08); border-color: rgba(33,115,91,0.22); }
+    .savings-metric.highlight strong { color: var(--green); }
+    .savings-note { margin-top: 0.9rem; color: var(--mid); font-size: 0.78rem; line-height: 1.6; }
+
+    .premium { background: #161b1a; color: var(--bg); overflow: hidden; }
+    .premium::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent, transparent 91px, rgba(255,255,255,0.035) 91px, rgba(255,255,255,0.035) 92px); pointer-events: none; }
+    .premium .section-inner { position: relative; z-index: 1; }
+    .premium .sec-label, .premium h2 em { color: #f0b45e; }
+    .premium .sec-label::before { background: #f0b45e; }
+    .premium .section-head p { color: rgba(247,245,242,0.72); }
+    .premium-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .premium-item { min-height: 175px; padding: 1.35rem; border: 1px solid rgba(247,245,242,0.15); background: rgba(247,245,242,0.06); }
+    .premium-item strong { display: block; margin-bottom: 0.55rem; color: #fff; }
+    .premium-item span { color: rgba(247,245,242,0.72); line-height: 1.65; font-size: 0.9rem; }
+
+    .compare { background: var(--bg); }
+    .compare-table { border: 1px solid var(--line); background: rgba(255,255,255,0.48); }
+    .compare-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; border-bottom: 1px solid var(--line); min-height: 58px; align-items: center; }
+    .compare-row:last-child { border-bottom: 0; }
+    .compare-row > div { padding: 0.9rem 1rem; color: var(--mid); font-size: 0.9rem; }
+    .compare-row > div:first-child { color: var(--fg); font-weight: 700; }
+    .compare-row.header > div { color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.74rem; }
+    .yes { color: var(--green); font-weight: 700; }
+    .no { color: var(--mid); }
+
+    .notice { background: var(--bg2); }
+    .notice-box { border-left: 4px solid var(--accent); background: rgba(255,255,255,0.52); padding: 1.5rem 2rem; max-width: 880px; }
+    .notice-box p { color: var(--mid); line-height: 1.8; font-weight: 300; }
+    .final-cta { text-align: center; background: var(--fg); color: var(--bg); padding: 5rem 6%; }
+    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1; margin-bottom: 1rem; }
+    .final-cta p { color: rgba(247,245,242,0.72); max-width: 660px; margin: 0 auto 1.8rem; line-height: 1.75; }
+    .final-cta .btn { background: var(--bg); color: var(--fg); border-color: var(--bg); }
+    .final-cta .btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 2.4rem 6%; background: var(--bg); border-top: 1px solid var(--line); }
+    .foot-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--fg); }
+    .foot-logo span { color: var(--accent); }
+    footer p, footer a { color: var(--mid); font-size: 0.78rem; }
+    footer a:hover { color: var(--accent); }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .hero-inner, .data-grid, .credit-union-card { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero::after { display: none; }
+      .phone-stage { min-height: 520px; }
+      .phone { height: 520px; }
+      .floating-stat { display: none; }
+      .feature-grid, .premium-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 760px) {
+      nav ul { display: none; }
+      .hamburger { display: flex; }
+      .hero { min-height: 92vh; padding-top: 6.5rem; }
+      .hero-inner { display: block; }
+      .phone-stage { display: none; }
+      h1 { font-size: clamp(3rem, 17vw, 5rem); }
+      .feature-grid, .premium-grid { grid-template-columns: 1fr; }
+      .compare-row { grid-template-columns: 1fr; }
+      .compare-row.header { display: none; }
+      .compare-row > div { border-bottom: 1px solid var(--line); }
+      .compare-row > div:last-child { border-bottom: 0; }
+      .compare-row > div:nth-child(2)::before { content: "Free: "; font-weight: 700; color: var(--fg); }
+      .compare-row > div:nth-child(3)::before { content: "Premium: "; font-weight: 700; color: var(--accent); }
+      .savings-grid { grid-template-columns: 1fr; }
+      .phone { width: min(340px, 100%); height: 585px; }
+      .rate-value { font-size: 3.4rem; }
+      section { padding: 4.5rem 6%; }
+      .cta-row { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">NiON<span>lite</span></a>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#premium">Premium</a></li>
+      <li><a href="#compare">Plans</a></li>
+      <li><a href="legal.html">Legal</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#features" onclick="closeMobileNav()">Features</a>
+    <a href="#premium" onclick="closeMobileNav()">Premium</a>
+    <a href="#compare" onclick="closeMobileNav()">Plans</a>
+    <a href="legal.html">Legal</a>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Credit Union Mortgage Rate Tracker</div>
+        <h1>CUB <strong>Rates</strong></h1>
+        <p class="hero-sub">Track published mortgage rates from credit unions and banks in one focused app. Compare current rates, inspect lender details, watch one-year history, and get alerts when rates drop.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener">Download on the App Store</a>
+          <a class="btn secondary" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener">Get it on Google Play</a>
+        </div>
+        <div class="trust-line" aria-label="CUB Rates highlights">
+          <span>50+ lenders tracked</span>
+          <span>Published rates</span>
+          <span>No ads</span>
+        </div>
+      </div>
+
+      <div class="phone-stage" aria-label="CUB Rates product preview">
+        <div class="floating-stat one"><strong>1 year</strong><span>Premium historical rate charts for lender trends.</span></div>
+        <div class="floating-stat two"><strong>Alerts</strong><span>Watch a lender and get notified when rates fall.</span></div>
+        <div class="phone">
+          <div class="screen">
+            <div class="screen-top">
+              <div class="screen-title">CUB Rates</div>
+              <div class="premium-pill">Premium</div>
+            </div>
+            <div class="rate-hero">
+              <div class="rate-label">Best 30-year fixed snapshot</div>
+              <div class="rate-value">6.375<span>%</span></div>
+              <div class="rate-meta">Down 0.125 this week</div>
+            </div>
+            <div class="tabs"><span>1M</span><span class="active">3M</span><span>1Y</span></div>
+            <div class="chart">
+              <svg viewBox="0 0 320 155" role="img" aria-label="Mortgage rate chart preview">
+                <defs>
+                  <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#8b2635" stop-opacity="0.22" />
+                    <stop offset="100%" stop-color="#8b2635" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path d="M0 124H320" stroke="#e4dfd8" />
+                <path d="M0 92H320" stroke="#e4dfd8" />
+                <path d="M0 60H320" stroke="#e4dfd8" />
+                <path d="M0 30H320" stroke="#e4dfd8" />
+                <path d="M8 96 C44 78, 60 112, 92 88 S148 54, 184 66 S236 92, 312 43 L312 145 L8 145 Z" fill="url(#area)" />
+                <path d="M8 96 C44 78, 60 112, 92 88 S148 54, 184 66 S236 92, 312 43" fill="none" stroke="#8b2635" stroke-width="4" stroke-linecap="round" />
+                <path d="M8 116 C44 104, 72 125, 102 106 S152 80, 184 88 S240 108, 312 70" fill="none" stroke="#174b73" stroke-width="3" stroke-linecap="round" />
+                <circle cx="250" cy="76" r="5" fill="#8b2635" stroke="#fff" stroke-width="3" />
+              </svg>
+              <div class="tip">6.50% - May 26</div>
+            </div>
+            <div class="lender-list">
+              <div class="lender"><div><strong>PenFed Credit Union</strong><small>Available in selected states</small></div><b>6.375%</b></div>
+              <div class="lender"><div><strong>Navy Federal Credit Union</strong><small>Membership requirements included</small></div><b>6.500%</b></div>
+              <div class="lender"><div><strong>Alliant Credit Union</strong><small>Saved to favorites</small></div><b>6.625%</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <div class="sec-label">Why CUB Rates</div>
+        <h2>Mortgage rate shopping without the scattered tabs.</h2>
+        <p>CUB Rates is built for borrowers who want to compare lenders quickly, especially credit unions where the best rate may be hidden behind membership details or state availability.</p>
+      </div>
+      <div class="feature-grid reveal">
+        <article class="feature">
+          <div class="num">01</div>
+          <h3>Published lender rates</h3>
+          <p>Follow actual published mortgage rates from credit unions and banks, including 30-year fixed and ARM products where available.</p>
+        </article>
+        <article class="feature">
+          <div class="num">02</div>
+          <h3>Membership context</h3>
+          <p>Open lender profiles with membership requirements and links so you can judge whether a credit union is realistic for you.</p>
+        </article>
+        <article class="feature">
+          <div class="num">03</div>
+          <h3>Daily rate workflow</h3>
+          <p>Refresh rates, compare changes, save favorites, and use alerts to avoid missing a lender when it moves into your target range.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="data-section">
+    <div class="section-inner">
+      <div class="data-grid reveal">
+        <div class="chart-panel">
+          <div class="sec-label">Rate history</div>
+          <h2>See the rate trend, not just today's number.</h2>
+          <p class="hero-sub" style="margin:0;color:var(--mid);font-size:0.98rem;">Premium charts can show one month, three months, or one year of lender rate history, with moving tooltips for day-by-day inspection.</p>
+          <div class="big-chart">
+            <svg viewBox="0 0 520 245" role="img" aria-label="One-year mortgage rate history preview">
+              <path d="M0 196H520M0 148H520M0 100H520M0 52H520" stroke="#e2ddd6" />
+              <path d="M16 160 C68 124, 96 188, 142 138 S230 86, 288 116 S370 174, 502 70" fill="none" stroke="#8b2635" stroke-width="5" stroke-linecap="round" />
+              <path d="M16 182 C76 154, 112 202, 158 162 S240 116, 302 142 S386 190, 502 116" fill="none" stroke="#174b73" stroke-width="4" stroke-linecap="round" />
+              <path d="M16 145 C84 134, 132 150, 186 126 S276 94, 336 106 S412 138, 502 92" fill="none" stroke="#21735b" stroke-width="4" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="legend"><span>30-year fixed</span><span>ARM</span><span>Best lender trend</span></div>
+        </div>
+        <div class="calc-panel">
+          <div class="sec-label">Calculator</div>
+          <h2>Turn rates into payment decisions.</h2>
+          <div class="calc-row"><small>Loan amount</small><strong>$480,000</strong></div>
+          <div class="calc-row"><small>Rate</small><strong>6.375%</strong></div>
+          <div class="calc-row"><small>Monthly principal and interest</small><strong>$2,995</strong></div>
+          <div class="calc-row"><small>Premium extra payment scenarios</small><strong>$250/mo</strong></div>
+          <p class="hero-sub" style="margin:1.2rem 0 0;color:var(--mid);font-size:0.95rem;">The free tier includes the mortgage calculator. Premium adds extra payment scenarios so you can test payoff options while comparing lenders.</p>
+        </div>
+      </div>
+      <div class="credit-union-card reveal">
+        <div>
+          <div class="sec-label">Credit unions vs big banks</div>
+          <h3>Member-first lenders can change the <em>monthly math.</em></h3>
+          <p>Credit unions are member-owned, so they often return value through competitive loan pricing, lower fees, and relationship-driven eligibility paths instead of optimizing only for outside shareholders. CUB Rates helps surface those lenders next to banks so the difference is easier to inspect.</p>
+          <div class="benefit-list">
+            <div>Profits can flow back to members<span>Many credit unions use earnings to improve rates, fees, and member services.</span></div>
+            <div>Membership may be broader than expected<span>Employer, military, regional, local, and donation-based paths can make some credit unions accessible.</span></div>
+            <div>Small rate differences compound<span>A fraction of a percent can become meaningful over years of mortgage payments.</span></div>
+          </div>
+        </div>
+        <div class="savings-box" aria-label="Hypothetical mortgage savings example">
+          <div class="savings-title">Hypothetical savings example</div>
+          <div class="savings-grid">
+            <div class="savings-metric"><small>Big bank 30-year fixed</small><strong>6.750%</strong></div>
+            <div class="savings-metric"><small>Credit union 30-year fixed</small><strong>6.375%</strong></div>
+            <div class="savings-metric"><small>Estimated monthly savings on $480k</small><strong>$119</strong></div>
+            <div class="savings-metric highlight"><small>Estimated 5-year savings</small><strong>$7,120</strong></div>
+          </div>
+          <p class="savings-note">Example assumes a $480,000, 30-year fixed mortgage comparing 6.750% vs 6.375% principal-and-interest payments only. It excludes taxes, insurance, points, credits, fees, membership costs, and refinancing decisions. Actual savings vary by borrower and lender.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium" id="premium">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <div class="sec-label">Premium</div>
+        <h2>Unlock the full mortgage rate <em>workflow.</em></h2>
+        <p>The free tier gives you the best current rate snapshot, the calculator, and an ad-free feel for the app. Premium opens the lender research tools that make CUB Rates useful for serious rate shopping.</p>
+      </div>
+      <div class="premium-grid reveal">
+        <div class="premium-item"><strong>All lender rates</strong><span>View the complete lender list instead of the limited best-rate preview.</span></div>
+        <div class="premium-item"><strong>One-year historical charts</strong><span>Inspect up to one year of daily rate history with one month, three month, and one year views.</span></div>
+        <div class="premium-item"><strong>Advanced filters</strong><span>Filter by bank, credit union, military, employer, regional, local, donation-based, and favorites.</span></div>
+        <div class="premium-item"><strong>State selection</strong><span>Move beyond the All view and narrow lender results by state availability.</span></div>
+        <div class="premium-item"><strong>Favorite lenders</strong><span>Save lenders you want to revisit and quickly filter the table to your shortlist.</span></div>
+        <div class="premium-item"><strong>Rate drop alerts</strong><span>Set target alerts from lender details and get notified when a watched rate falls.</span></div>
+        <div class="premium-item"><strong>Full bank profiles</strong><span>Open lender details, rate charts, URLs, and membership requirements in one place.</span></div>
+        <div class="premium-item"><strong>Extra payment scenarios</strong><span>Model extra monthly, yearly, or one-time payments inside the mortgage calculator.</span></div>
+        <div class="premium-item"><strong>No ads or trackers</strong><span>The app stays focused on rates. No sponsored placements, ads, or third-party tracking distractions.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="compare" id="compare">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <div class="sec-label">Free vs Premium</div>
+        <h2>Start simple, upgrade when you are actively shopping.</h2>
+        <p>CUB Rates keeps the free experience intentionally minimal. Premium is for users who need the full lender table, saved workflow, and monitoring tools.</p>
+      </div>
+      <div class="compare-table reveal" aria-label="Free and Premium feature comparison">
+        <div class="compare-row header"><div>Feature</div><div>Free</div><div>Premium</div></div>
+        <div class="compare-row"><div>Best rate snapshot</div><div><span class="yes">Included</span></div><div><span class="yes">Included</span></div></div>
+        <div class="compare-row"><div>Mortgage calculator</div><div><span class="yes">Included</span></div><div><span class="yes">Included with extra scenarios</span></div></div>
+        <div class="compare-row"><div>Complete lender rate list</div><div><span class="no">Limited</span></div><div><span class="yes">Included</span></div></div>
+        <div class="compare-row"><div>Rate history charts</div><div><span class="no">Locked</span></div><div><span class="yes">One-year history</span></div></div>
+        <div class="compare-row"><div>Advanced filters and state selection</div><div><span class="no">Locked</span></div><div><span class="yes">Included</span></div></div>
+        <div class="compare-row"><div>Favorites and rate drop alerts</div><div><span class="no">Locked</span></div><div><span class="yes">Included</span></div></div>
+        <div class="compare-row"><div>Ads</div><div><span class="yes">None</span></div><div><span class="yes">None</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="section-inner">
+      <div class="notice-box reveal">
+        <p>Rates shown in CUB Rates are for informational purposes only and are sourced from publicly available information. Actual rates may vary based on credit score, loan amount, down payment, geography, and lender criteria. Always confirm rates and eligibility directly with the lender before making financial decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <h2>Ready to compare mortgage rates?</h2>
+    <p>Download CUB Rates for iOS or Android and keep a cleaner watchlist for the credit unions and banks that matter to your search.</p>
+    <div class="cta-row" style="justify-content:center;margin-bottom:0;">
+      <a class="btn" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener">Download on the App Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener">Get it on Google Play</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025 NiONlite LLC. All rights reserved.</p>
+    <div style="display:flex;gap:1.4rem;flex-wrap:wrap;">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="legal.html">Legal</a>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    reveals.forEach(el => obs.observe(el));
+
+    const ham = document.getElementById('ham');
+    const mobileNav = document.getElementById('mobileNav');
+    ham.addEventListener('click', function() {
+      ham.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+    function closeMobileNav() {
+      ham.classList.remove('open');
+      mobileNav.classList.remove('open');
+    }
+  </script>
+</body>
+</html>
