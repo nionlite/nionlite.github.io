@@ -149,6 +149,14 @@
     .pro-item { padding: 1.25rem; background: rgba(255,255,255,0.58); border: 1px solid var(--line); min-height: 150px; }
     .pro-item strong { display: block; margin-bottom: 0.5rem; }
     .pro-item span { color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    .guides { background: #fffdf9; }
+    .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .guide-card { display: flex; flex-direction: column; justify-content: space-between; min-height: 250px; padding: 1.4rem; border: 1px solid var(--line); background: var(--paper); transition: border-color 0.2s, transform 0.2s; }
+    .guide-card:hover { border-color: rgba(196,69,47,0.34); transform: translateY(-2px); }
+    .guide-card span { color: var(--tomato); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .guide-card h3 { font-size: 1.1rem; line-height: 1.35; margin: 0.9rem 0 0.7rem; }
+    .guide-card p { color: var(--muted); line-height: 1.7; font-size: 0.92rem; }
+    .guide-card em { display: block; margin-top: 1.2rem; color: var(--leaf); font-style: normal; font-weight: 700; font-size: 0.82rem; }
     .safety { background: var(--paper); }
     .safety-box { border-left: 4px solid var(--tomato); padding: 1.5rem 2rem; background: #fffdf9; box-shadow: 0 10px 34px rgba(36,25,16,0.08); }
     .safety-box p { color: var(--muted); line-height: 1.8; }
@@ -162,7 +170,7 @@
     @media (max-width: 880px) {
       .nav-links { display: none; }
       .hero-preview, .journal-grid { grid-template-columns: 1fr; }
-      .feature-grid, .pro-list { grid-template-columns: 1fr; }
+      .feature-grid, .pro-list, .guide-grid { grid-template-columns: 1fr; }
       .quick-facts { grid-template-columns: 1fr; }
       section { padding: 4rem 6%; }
       h1 { font-size: clamp(3.3rem, 18vw, 5rem); }
@@ -180,6 +188,7 @@
       <a href="#features">Features</a>
       <a href="#journal">Journal</a>
       <a href="#pro">Pro</a>
+      <a href="#guides">Guides</a>
       <a href="legal.html">Legal</a>
     </div>
   </nav>
@@ -305,6 +314,41 @@
     <div class="section-inner">
       <div class="safety-box">
         <p><strong>Food safety disclaimer:</strong> Plate Atlas provides AI estimates only. Restaurant recipes, substitutions, cooking oils, sauces, and cross-contact can vary. Always verify ingredients, allergens, and preparation with restaurant staff before eating, especially if you have allergies or medical dietary restrictions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="guides" id="guides">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Guides for ordering with more confidence.</h2>
+        <p>Read practical Plate Atlas guides on menu scanning, dietary restrictions, allergens, and building a restaurant food journal around the dishes that work for you.</p>
+      </div>
+      <div class="guide-grid">
+        <a class="guide-card" href="blog/ai-menu-scanner-guide.html">
+          <div>
+            <span>AI Menu Scanner</span>
+            <h3>How to understand restaurant dishes before you order</h3>
+            <p>Use AI to decode menu names, likely ingredients, preparation style, taste profile, and hidden ingredient questions.</p>
+          </div>
+          <em>Read guide &#8594;</em>
+        </a>
+        <a class="guide-card" href="blog/menu-scanner-for-dietary-restrictions.html">
+          <div>
+            <span>Dietary Fit</span>
+            <h3>Checking menu items for allergens and preferences</h3>
+            <p>Set a personal profile and use Plate Atlas as a faster first-pass check before confirming details with staff.</p>
+          </div>
+          <em>Read guide &#8594;</em>
+        </a>
+        <a class="guide-card" href="blog/restaurant-food-journal-guide.html">
+          <div>
+            <span>Food Journal</span>
+            <h3>Why saving dishes makes eating out easier</h3>
+            <p>Keep restaurant notes, safe dishes, and meal memories so good food decisions become easier to repeat.</p>
+          </div>
+          <em>Read guide &#8594;</em>
+        </a>
       </div>
     </div>
   </section>
