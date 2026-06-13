@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByWhen - Smart Deadline Reminders for iPhone</title>
+  <meta name="description" content="ByWhen is a premium smart reminder app for iPhone that plans nudges around your deadline, task effort, calendar, sleep, work rhythm, and reminder style." />
+  <link rel="canonical" href="https://nionlite.com/bywhen.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ByWhen - Smart Deadline Reminders for iPhone" />
+  <meta property="og:description" content="Create deadline reminders that adapt to time left, effort, calendar blocks, sleep, work rhythm, and recurring tasks." />
+  <meta property="og:url" content="https://nionlite.com/bywhen.html" />
+  <meta property="og:image" content="https://nionlite.com/bywhen-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ByWhen - Smart Deadline Reminders for iPhone" />
+  <meta name="twitter:description" content="Smart deadline reminders that find realistic windows before time runs out." />
+  <meta name="twitter:image" content="https://nionlite.com/bywhen-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ByWhen",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "iOS",
+    "description": "Smart deadline reminder app that schedules adaptive nudges around effort, calendar availability, sleep, work rhythm, and task type.",
+    "image": "https://nionlite.com/bywhen-icon.png",
+    "offers": {
+      "@type": "Offer",
+      "category": "Subscription",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NiONlite LLC",
+      "url": "https://nionlite.com/"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1c1c1c;
+      --paper: #f7f5f2;
+      --panel: #ffffff;
+      --fog: #edeae5;
+      --muted: #7a7469;
+      --line: rgba(28, 28, 28, 0.1);
+      --accent: #8b2635;
+      --accent2: #b54455;
+      --blue: #174b73;
+      --green: #21735b;
+      --gold: #b8842d;
+      --shadow: 0 24px 80px rgba(28, 28, 28, 0.14);
+    }
+    html { scroll-behavior: smooth; }
+    html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--paper); }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: fixed; inset: 0 0 auto; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 6%;
+      background: rgba(251, 250, 247, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 0.7rem; font-weight: 800; }
+    .brand img { width: 38px; height: 38px; border-radius: 8px; box-shadow: 0 10px 24px rgba(139, 38, 53, 0.18); }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; }
+    .nav-links a {
+      font-size: 0.78rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--muted);
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      padding: 0.68rem 1rem; background: var(--ink); color: var(--paper);
+      border-radius: 8px; border: 1px solid var(--ink);
+    }
+    .nav-cta:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+
+    .hero {
+      min-height: 96vh; position: relative; overflow: hidden;
+      display: grid; align-items: center; padding: 7rem 6% 4rem;
+      background:
+        linear-gradient(135deg, rgba(139, 38, 53, 0.11), transparent 38%),
+        linear-gradient(245deg, rgba(237, 234, 229, 0.9), transparent 34%),
+        var(--paper);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.42;
+      background: repeating-linear-gradient(90deg, transparent, transparent 83px, rgba(23, 23, 25, 0.035) 83px, rgba(23, 23, 25, 0.035) 84px);
+    }
+    .hero-inner {
+      position: relative; z-index: 1; width: min(1180px, 100%);
+      display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 4rem; align-items: center;
+    }
+    .hero-inner > * { min-width: 0; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.7rem;
+      color: var(--accent); font-size: 0.76rem; font-weight: 800;
+      letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 1.2rem;
+    }
+    .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--accent); }
+    h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: 5.7rem;
+      line-height: 0.95; font-weight: 700; margin-bottom: 1.3rem;
+      max-width: 100%;
+    }
+    h1 span { color: var(--accent); }
+    .hero-sub { max-width: 590px; color: var(--muted); line-height: 1.75; font-size: 1.12rem; font-weight: 300; margin-bottom: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.4rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+      min-height: 50px; padding: 0.9rem 1.35rem; border-radius: 8px;
+      background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
+      font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      transition: transform 0.16s, background 0.2s, border-color 0.2s;
+    }
+    .btn:hover { transform: translateY(-1px); background: var(--accent); border-color: var(--accent); }
+    .btn.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+    .btn.secondary:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .btn.soon {
+      background: rgba(255,255,255,0.62); color: var(--muted); border-color: var(--line);
+      cursor: default; pointer-events: none;
+    }
+    .btn.soon:hover { transform: none; background: rgba(255,255,255,0.62); color: var(--muted); border-color: var(--line); }
+    .trust-line { display: flex; flex-wrap: wrap; gap: 0.65rem; color: var(--muted); font-size: 0.83rem; }
+    .trust-line span { padding: 0.42rem 0.66rem; background: rgba(255, 255, 255, 0.58); border: 1px solid var(--line); border-radius: 8px; }
+
+    .showcase { position: relative; min-height: 560px; display: flex; align-items: center; justify-content: center; }
+    .phone {
+      position: relative; z-index: 2; width: min(350px, 84vw); height: 560px;
+      border-radius: 34px; background: var(--ink); padding: 14px; box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .phone::before {
+      content: ""; position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+      width: 72px; height: 5px; background: rgba(255, 255, 255, 0.18); border-radius: 999px; z-index: 4;
+    }
+    .screen {
+      height: 100%; overflow: hidden; border-radius: 24px; background: var(--paper);
+      padding: 1.1rem; display: flex; flex-direction: column; gap: 0.78rem;
+    }
+    .screen-head { display: flex; align-items: center; justify-content: space-between; margin-top: 0.8rem; }
+    .mini-brand { display: flex; align-items: center; gap: 0.55rem; font-weight: 900; }
+    .mini-brand img { width: 28px; height: 28px; border-radius: 8px; }
+    .risk-pill { color: #fff; background: var(--accent); font-size: 0.62rem; font-weight: 800; padding: 0.35rem 0.55rem; border-radius: 999px; }
+    .today-card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.92rem; }
+    .task-title { font-size: 1.45rem; line-height: 1.15; font-weight: 800; margin: 0.5rem 0; }
+    .task-meta { color: var(--muted); font-size: 0.78rem; line-height: 1.55; }
+    .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+    .metric { background: var(--fog); border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem; }
+    .metric strong { display: block; font-size: 1.35rem; line-height: 1; }
+    .metric span { display: block; color: var(--muted); font-size: 0.68rem; margin-top: 0.35rem; }
+    .window-card { background: var(--ink); color: #fff; border-radius: 8px; padding: 1rem; }
+    .window-card small { display: block; color: rgba(255,255,255,0.62); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+    .window-card strong { font-size: 1.25rem; }
+    .action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
+    .screen-btn { min-height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.78rem; font-weight: 900; }
+    .screen-btn.start { background: var(--accent); color: #fff; }
+    .screen-btn.later { background: #fff; border: 1px solid var(--line); color: var(--ink); }
+    .floating-card {
+      position: absolute; z-index: 3; width: 206px; padding: 1rem; border: 1px solid var(--line);
+      background: rgba(255,255,255,0.9); border-radius: 8px; box-shadow: 0 18px 50px rgba(35, 32, 28, 0.14);
+    }
+    .floating-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.35rem; }
+    .floating-card span { color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+    .floating-card.one { top: 28px; left: 0; border-top: 4px solid var(--accent); }
+    .floating-card.two { right: 0; bottom: 30px; border-top: 4px solid var(--gold); }
+
+    section { padding: 6.5rem 6%; }
+    .section-inner { width: min(1120px, 100%); margin: 0 auto; }
+    .section-head { max-width: 740px; margin-bottom: 2.2rem; }
+    .sec-label {
+      display: flex; align-items: center; gap: 0.7rem; color: var(--accent);
+      font-size: 0.74rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .sec-label::before { content: ""; width: 24px; height: 1px; background: var(--accent); }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: 3.65rem; line-height: 1.04; margin-bottom: 1rem; }
+    h2 em { color: var(--accent); font-style: italic; }
+    .section-head p { color: var(--muted); line-height: 1.78; font-weight: 300; }
+
+    .factor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .factor {
+      min-height: 236px; padding: 1.45rem; background: var(--panel);
+      border: 1px solid var(--line); border-radius: 8px; position: relative; overflow: hidden;
+    }
+    .factor::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--accent); }
+    .factor:nth-child(2)::before { background: var(--blue); }
+    .factor:nth-child(3)::before { background: var(--gold); }
+    .factor:nth-child(4)::before { background: var(--green); }
+    .factor:nth-child(5)::before { background: var(--accent2); }
+    .factor:nth-child(6)::before { background: var(--accent); }
+    .factor .num { color: var(--muted); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; margin-bottom: 1rem; }
+    .factor h3 { font-size: 1.08rem; margin-bottom: 0.7rem; }
+    .factor p { color: var(--muted); line-height: 1.7; font-size: 0.92rem; }
+
+    .planner { background: var(--ink); color: var(--paper); }
+    .planner .section-head p { color: rgba(251,250,247,0.72); }
+    .planner .sec-label, .planner h2 em { color: #f2b45a; }
+    .planner .sec-label::before { background: #f2b45a; }
+    .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .step { border: 1px solid rgba(251,250,247,0.16); background: rgba(251,250,247,0.06); border-radius: 8px; padding: 1.4rem; min-height: 190px; }
+    .step b { display: block; color: #f2b45a; margin-bottom: 0.7rem; }
+    .step strong { display: block; margin-bottom: 0.55rem; }
+    .step span { display: block; color: rgba(251,250,247,0.72); line-height: 1.65; font-size: 0.9rem; }
+
+    .premium { background: var(--fog); }
+    .premium-wrap {
+      display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 1rem; align-items: stretch;
+    }
+    .premium-copy, .premium-list { background: rgba(255,255,255,0.72); border: 1px solid var(--line); border-radius: 8px; padding: 1.7rem; }
+    .premium-copy h2 { font-size: 3.2rem; }
+    .premium-copy p { color: var(--muted); line-height: 1.75; margin-top: 1rem; }
+    .premium-badge {
+      display: inline-flex; color: #fff; background: var(--accent); border-radius: 999px;
+      padding: 0.45rem 0.72rem; font-size: 0.74rem; font-weight: 900; margin-bottom: 1rem;
+    }
+    .premium-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .premium-item { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 1rem; min-height: 125px; }
+    .premium-item strong { display: block; margin-bottom: 0.45rem; }
+    .premium-item span { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+
+    .privacy-strip { background: var(--paper); }
+    .privacy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .privacy-card { border: 1px solid var(--line); border-radius: 8px; padding: 1.4rem; background: #fff; min-height: 170px; }
+    .privacy-card strong { display: block; margin-bottom: 0.6rem; }
+    .privacy-card span { color: var(--muted); line-height: 1.68; font-size: 0.92rem; }
+
+    .final-cta { text-align: center; background: var(--ink); color: var(--paper); padding: 5rem 6%; }
+    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1; margin-bottom: 1rem; }
+    .final-cta p { color: rgba(247,245,242,0.72); max-width: 660px; margin: 0 auto 1.8rem; line-height: 1.75; }
+    .final-cta .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+    .final-cta .btn:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+    .final-cta .btn.soon,
+    .final-cta .btn.soon:hover {
+      background: transparent; color: rgba(247,245,242,0.62);
+      border-color: rgba(247,245,242,0.18); transform: none;
+    }
+
+    footer {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+      padding: 2.4rem 6%; background: var(--paper); border-top: 1px solid var(--line);
+    }
+    .foot-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+    .foot-logo span { color: var(--accent); }
+    footer p, footer a { color: var(--muted); font-size: 0.78rem; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 940px) {
+      .nav-links { display: none; }
+      .hero-inner, .premium-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+      h1 { font-size: 4.2rem; }
+      h2, .premium-copy h2, .final-cta h2 { font-size: 2.8rem; }
+      .final-cta h2 { font-size: clamp(2.4rem, 6vw, 4.7rem); }
+      .showcase { min-height: 520px; }
+      .floating-card { display: none; }
+      .factor-grid, .timeline, .privacy-grid { grid-template-columns: 1fr; }
+      .premium-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      nav { padding: 0.85rem 5%; }
+      .hero, section, .final-cta { padding-left: 5%; padding-right: 5%; }
+      .hero-inner { display: block; width: 320px; max-width: calc(100vw - 40px); }
+      .hero-inner > div:first-child, .hero-sub, .cta-row { width: 100%; max-width: 100%; }
+      h1 { font-size: 2.75rem; }
+      h2, .premium-copy h2, .final-cta h2 { font-size: 2.35rem; }
+      .final-cta h2 { font-size: clamp(2.4rem, 6vw, 4.7rem); }
+      .hero-sub { font-size: 1rem; }
+      .showcase { min-height: 540px; width: 320px; max-width: calc(100vw - 40px); justify-content: flex-start; }
+      .phone { width: min(320px, 100%); height: 536px; }
+      .cta-row .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="brand">
+      <img src="bywhen-icon.png" alt="ByWhen app icon" />
+      <span>ByWhen</span>
+    </a>
+    <div class="nav-links" aria-label="Page navigation">
+      <a href="#factors">Factors</a>
+      <a href="#planner">Nudges</a>
+      <a href="#premium">Premium</a>
+      <a href="bywhen-privacy.html">Privacy</a>
+      <a class="nav-cta" href="mailto:support@nionlite.com?subject=ByWhen%20Launch%20Updates">Launch updates</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Smart deadline reminders</div>
+        <h1>Do it <span>by when</span> it matters.</h1>
+        <p class="hero-sub">ByWhen turns a deadline into a realistic reminder plan. It looks at how long the task takes, what kind of task it is, your calendar, sleep, work rhythm, and how urgent the deadline has become.</p>
+        <div class="cta-row">
+          <span class="btn soon">App Store coming soon</span>
+          <span class="btn soon">Google Play coming soon</span>
+          <a class="btn secondary" href="mailto:support@nionlite.com?subject=ByWhen%20Launch%20Updates">Launch updates</a>
+          <a class="btn secondary" href="#factors">See how it works</a>
+        </div>
+        <div class="trust-line" aria-label="Product highlights">
+          <span>7 days of Premium</span>
+          <span>Private by design</span>
+          <span>Apple Calendar aware</span>
+        </div>
+      </div>
+
+      <div class="showcase" aria-label="ByWhen product preview">
+        <div class="floating-card one"><strong>Calendar aware</strong><span>Avoid busy blocks and protect sleep before choosing the next nudge window.</span></div>
+        <div class="phone">
+          <div class="screen">
+            <div class="screen-head">
+              <div class="mini-brand"><img src="bywhen-icon.png" alt="" /> ByWhen</div>
+              <span class="risk-pill">Critical</span>
+            </div>
+            <div class="today-card">
+              <div class="task-meta">Due Sunday at 6:00 PM</div>
+              <div class="task-title">Finish project proposal</div>
+              <div class="task-meta">Deep work &middot; Balanced nudges &middot; Can split</div>
+            </div>
+            <div class="metric-grid">
+              <div class="metric"><strong>2h</strong><span>Remaining</span></div>
+              <div class="metric"><strong>4h</strong><span>Open today</span></div>
+            </div>
+            <div class="window-card">
+              <small>Best next window</small>
+              <strong>Today, 3:15 PM for 45m</strong>
+            </div>
+            <div class="today-card">
+              <div class="task-meta">Why this nudge</div>
+              <div class="task-meta">Sleep protected, workday considered, 2 calendar blocks avoided, deadline risk rising.</div>
+            </div>
+            <div class="action-row">
+              <div class="screen-btn start">Start</div>
+              <div class="screen-btn later">Later</div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-card two"><strong>Recurring ready</strong><span>Daily, weekly, monthly, yearly, and selected-day tasks roll forward after completion.</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="factors">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="sec-label">Built for real life</div>
+        <h2>One reminder is not enough when the deadline is real.</h2>
+        <p>ByWhen is designed for tasks that need judgment, not just a single alarm. It scores open time against practical constraints and keeps nudging when a reminder is dismissed.</p>
+      </div>
+      <div class="factor-grid">
+        <article class="factor"><div class="num">01</div><h3>Deadline risk</h3><p>The closer the due date gets, the more urgent the plan becomes. ByWhen shows when a task is on track, at risk, or critical.</p></article>
+        <article class="factor"><div class="num">02</div><h3>Task effort</h3><p>A 10 minute call and a 3 hour writing session should not be scheduled the same way. ByWhen uses estimated duration and minimum session length.</p></article>
+        <article class="factor"><div class="num">03</div><h3>Task type</h3><p>Deep work, admin, study, calls, and out-and-away errands get different scheduling behavior because they need different kinds of time.</p></article>
+        <article class="factor"><div class="num">04</div><h3>Calendar blocks</h3><p>Apple Calendar events can become busy windows that ByWhen avoids when choosing when to nudge you next.</p></article>
+        <article class="factor"><div class="num">05</div><h3>Sleep and work rhythm</h3><p>Your wake time, sleep time, work hours, and workdays help ByWhen avoid bad times and protect the day around your real routine.</p></article>
+        <article class="factor"><div class="num">06</div><h3>Reminder style</h3><p>Choose a task-specific nudge style, from gentle to persistent, so the app matches the seriousness of the work.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="planner" class="planner">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="sec-label">Adaptive nudges</div>
+        <h2>Dismissed does not mean forgotten.</h2>
+        <p>ByWhen is made for the moment when you tap later. It reconsiders the task, the remaining time, and your schedule before deciding when to come back.</p>
+      </div>
+      <div class="timeline">
+        <article class="step"><b>1</b><strong>Add the deadline</strong><span>Set what is due, when it is due, how long it should take, and whether it can be split.</span></article>
+        <article class="step"><b>2</b><strong>Choose the task type</strong><span>ByWhen applies different rules for work sessions, calls, admin, study, and errands away from home or work.</span></article>
+        <article class="step"><b>3</b><strong>Get a best window</strong><span>The planner scores open time and explains why the nudge is happening now.</span></article>
+        <article class="step"><b>4</b><strong>Act from the notification</strong><span>Start, log time, mark done, or remind later without losing the thread.</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="premium" class="premium">
+    <div class="section-inner premium-wrap">
+      <div class="premium-copy">
+        <span class="premium-badge">Premium from day one</span>
+        <h2>Your first 7 days are Premium.</h2>
+        <p>ByWhen starts as the full product, not a thin free tier. During the first 7 days, every smart reminder stays active. After that, your reminders remain safe, but Premium keeps all of them active and adaptive.</p>
+        <p>No account is required for the first 7 days. Subscription purchases are handled by Apple through your Apple ID.</p>
+      </div>
+      <div class="premium-list">
+        <div class="premium-item"><strong>Unlimited smart reminders</strong><span>Keep every deadline and recurring task active.</span></div>
+        <div class="premium-item"><strong>Calendar-aware planning</strong><span>Use Apple Calendar blocks when scoring open windows.</span></div>
+        <div class="premium-item"><strong>Task-specific nudges</strong><span>Set the reminder style per task instead of globally.</span></div>
+        <div class="premium-item"><strong>Notification actions</strong><span>Start, snooze, log time, or finish directly from the alert.</span></div>
+        <div class="premium-item"><strong>Daily rhythm</strong><span>Protect sleep, work hours, and workdays from bad suggestions.</span></div>
+        <div class="premium-item"><strong>Local backup</strong><span>Keep reminders backed up on-device with optional export to iCloud Drive.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy-strip">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="sec-label">Private by design</div>
+        <h2>Your schedule should feel personal because it stays personal.</h2>
+        <p>ByWhen is privacy focused by design. Your tasks, deadline plans, rhythm settings, calendar blocks, and local backups stay on your device. Data does not go to NiONlite servers for planning, and backup files only leave the device if you choose to export them to your own iCloud Drive or another destination.</p>
+      </div>
+      <div class="privacy-grid">
+        <article class="privacy-card"><strong>On-device planning</strong><span>Smart reminder scoring runs from data stored locally on your iPhone.</span></article>
+        <article class="privacy-card"><strong>Your iCloud, your choice</strong><span>Backups only go to iCloud Drive when you explicitly export them there.</span></article>
+        <article class="privacy-card"><strong>No account required</strong><span>ByWhen can be used without creating a NiONlite account.</span></article>
+        <article class="privacy-card"><strong>No ad tracking</strong><span>The app is not built around ad networks or cross-app tracking.</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <h2>Make deadlines easier to trust.</h2>
+    <p>ByWhen is being prepared for app store release. The App Store and Google Play links will be added here when the product pages are live.</p>
+    <div class="cta-row" style="justify-content:center;margin-bottom:0;">
+      <span class="btn soon">App Store coming soon</span>
+      <span class="btn soon">Google Play coming soon</span>
+      <a class="btn" href="mailto:support@nionlite.com?subject=ByWhen%20Launch%20Updates">Get launch updates</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025 NiONlite LLC. All rights reserved.</p>
+    <div style="display:flex;gap:1.4rem;flex-wrap:wrap;">
+      <a href="index.html">Home</a>
+      <a href="bywhen-privacy.html">Privacy</a>
+      <a href="bywhen-terms.html">Terms</a>
+      <a href="mailto:support@nionlite.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

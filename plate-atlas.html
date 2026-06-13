@@ -161,12 +161,15 @@
     .safety-box { border-left: 4px solid var(--tomato); padding: 1.5rem 2rem; background: #fffdf9; box-shadow: 0 10px 34px rgba(36,25,16,0.08); }
     .safety-box p { color: var(--muted); line-height: 1.8; }
     .final-cta { text-align: center; background: var(--ink); color: var(--paper); padding: 5rem 6%; }
-    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; margin-bottom: 1rem; }
-    .final-cta p { color: rgba(255,250,244,0.72); max-width: 640px; margin: 0 auto 1.8rem; line-height: 1.75; }
-    .final-cta .btn { background: var(--paper); color: var(--ink); }
-    footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 2rem 6%; background: #111; color: rgba(255,250,244,0.76); }
-    footer a { color: rgba(255,250,244,0.76); margin-left: 1rem; }
-    footer a:hover { color: var(--paper); }
+    .final-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 1; margin-bottom: 1rem; }
+    .final-cta p { color: rgba(255,250,244,0.72); max-width: 660px; margin: 0 auto 1.8rem; line-height: 1.75; }
+    .final-cta .btn { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+    .final-cta .btn:hover { background: var(--tomato); color: var(--paper); border-color: var(--tomato); }
+    footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: 2.4rem 6%; background: var(--paper); border-top: 1px solid var(--line); }
+    .foot-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--ink); }
+    .foot-logo span { color: var(--tomato); }
+    footer p, footer a { color: var(--muted); font-size: 0.78rem; }
+    footer a:hover { color: var(--tomato); }
     @media (max-width: 880px) {
       .nav-links { display: none; }
       .hero-preview, .journal-grid { grid-template-columns: 1fr; }
@@ -356,18 +359,20 @@
   <section class="final-cta" id="download">
     <h2>Take the guesswork off the menu.</h2>
     <p>Plate Atlas is available now for iPhone and Android.</p>
-    <div class="cta-row">
+    <div class="cta-row" style="justify-content:center;margin-bottom:0;">
       <a class="btn" href="https://apps.apple.com/us/app/plate-atlas/id6764467007" target="_blank" rel="noopener">Download on the App Store</a>
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.nionlite.plateatlas" target="_blank" rel="noopener">Get it on Google Play</a>
     </div>
   </section>
 
   <footer>
-    <div>NiONlite LLC</div>
-    <div>
+    <div class="foot-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025 NiONlite LLC. All rights reserved.</p>
+    <div style="display:flex;gap:1.4rem;flex-wrap:wrap;">
+      <a href="index.html">Home</a>
       <a href="plate-atlas-privacy.html">Privacy</a>
       <a href="plate-atlas-terms.html">Terms</a>
-      <a href="index.html">Home</a>
+      <a href="legal.html">Legal</a>
     </div>
   </footer>
 </body>
