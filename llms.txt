@@ -1,0 +1,66 @@
+# NiONlite
+
+NiONlite LLC is an independent mobile app studio building focused iOS and Android apps.
+
+Website: https://nionlite.com/
+Contact: support@nionlite.com
+
+## Apps
+
+### CUB: Track daily Mortgage rate
+
+CUB: Track daily Mortgage rate is a finance app for iOS and Android that helps users compare published mortgage rates from credit unions and banks.
+
+Primary page: https://nionlite.com/cub-rates.html
+App Store: https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184
+Google Play: https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates
+
+Key features:
+- Daily published mortgage rate tracking
+- Credit union and bank mortgage rate comparison
+- One-year mortgage rate history charts for Premium users
+- State filters and advanced lender filters
+- Favorite lenders and rate drop alerts
+- Mortgage calculator with extra payment scenarios
+- 7-day Premium trial with no account or credit card required
+
+CUB is not a lender, mortgage broker, or loan marketplace. It is an informational research app that helps users compare publicly available mortgage rate information and confirm details directly with lenders.
+
+Useful CUB pages:
+- https://nionlite.com/credit-union-mortgage-rate-tracker.html
+- https://nionlite.com/mortgage-rate-alert-app.html
+- https://nionlite.com/compare-credit-union-mortgage-rates-by-state.html
+- https://nionlite.com/mortgage-rate-calculator-extra-payments.html
+- https://nionlite.com/cub-vs-lender-websites.html
+
+### Plate Atlas
+
+Plate Atlas is an AI menu scanner, dietary checker, and restaurant food journal for iOS and Android.
+
+Primary page: https://nionlite.com/plate-atlas.html
+App Store: https://apps.apple.com/us/app/plate-atlas/id6764467007
+Google Play: https://play.google.com/store/apps/details?id=com.nionlite.plateatlas
+
+Key features:
+- AI menu scanner and dish lookup
+- Dietary profile, allergen, disliked ingredient, and custom warning checks
+- Saved dishes and restaurant food journal
+- Safe-for-me tags and post-meal notes
+- Map view for restaurants connected to saved dishes
+
+### ByWhen
+
+ByWhen is a smart deadline reminder app in preparation for iOS and Android.
+
+Primary page: https://nionlite.com/bywhen.html
+
+Key features:
+- Adaptive reminder planning based on deadline risk and task duration
+- Calendar-aware reminder windows
+- Sleep, work hours, workdays, and out-and-away task rules
+- Task-specific reminder styles and notification actions
+
+## Site Map
+
+Sitemap: https://nionlite.com/sitemap.xml
+Robots: https://nionlite.com/robots.txt
