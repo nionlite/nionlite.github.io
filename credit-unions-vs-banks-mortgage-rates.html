@@ -79,6 +79,11 @@
     .footer-logo span { color: var(--accent); }
     footer p, footer a { font-size: 0.78rem; color: var(--mid); text-decoration: none; }
     footer a:hover { color: var(--accent); }
+
+    .store-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; margin: 0.2rem 0 1.2rem; }
+    .store-badge { display: inline-flex; align-items: center; min-height: 54px; transition: transform 0.15s, filter 0.2s; }
+    .store-badge:hover, .store-badge:focus-visible { transform: translateY(-1px); filter: brightness(1.06); outline: none; }
+    .store-badge img { display: block; height: 54px; width: auto; }
   </style>
 </head>
 <body>
@@ -154,14 +159,14 @@
       <h3>Track Credit Union Rates Daily</h3>
       <p>CUB Rates tracks 50+ credit unions across the US — real rates, updated every day.</p>
       <div class="cta-btns">
-        <a href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" class="cta-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.65.19.97.07l13.2-7.62-2.82-2.83-11.35 10.38zm-1.85-20.1C1.12 3.95 1 4.28 1 4.64v14.72c0 .36.12.69.33.98l.09.08 8.24-8.24v-.2L1.42 3.57l-.09.09zm18.4 8.57l-2.52-1.45-3.06 3.06 3.06 3.07 2.54-1.47c.72-.42.72-1.79-.02-2.21zM4.15.28L17.35 7.9l-2.82 2.82L3.18.34C3.5.22 3.85.24 4.15.28z"/></svg>
-          Get it on Google Play
-        </a>
-        <a href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" class="cta-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download on the App Store
-        </a>
+        <div class="store-badges" style="justify-content:center;margin-bottom:0;" aria-label="Download CUB">
+      <a class="store-badge" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" aria-label="Download on the App Store">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+      </a>
+      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+      </a>
+    </div>
       </div>
     </div>
 

@@ -95,6 +95,11 @@
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 6.5vw, 5.2rem); font-weight: 300; line-height: 1.1; color: var(--fg); margin-bottom: 1.6rem; }
     h1 em { font-style: italic; color: var(--accent); }
     .hero-sub { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: var(--mid); max-width: 500px; margin-bottom: 2.6rem; }
+
+    .store-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; margin: 0.2rem 0 1.2rem; }
+    .store-badge { display: inline-flex; align-items: center; min-height: 54px; transition: transform 0.15s, filter 0.2s; }
+    .store-badge:hover, .store-badge:focus-visible { transform: translateY(-1px); filter: brightness(1.06); outline: none; }
+    .store-badge img { display: block; height: 54px; width: auto; }
     .btn-dark { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 2rem; background: var(--fg); color: var(--bg); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .btn-dark:hover { background: var(--accent); transform: translateY(-1px); }
     .btn-ghost { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 2rem; border: 1px solid var(--border); color: var(--fg); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.2s; margin-left: 1rem; }
@@ -204,6 +209,8 @@
       .about-grid, .app-card, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .stats { grid-template-columns: 1fr 1fr; }
       .blog-grid { grid-template-columns: 1fr; }
+
+      .store-badges { flex-direction: column; align-items: flex-start; }
       .btn-ghost { margin-left: 0; margin-top: 0.8rem; }
     }
   </style>
@@ -327,8 +334,14 @@
           </ul>
           <div class="app-btns">
             <a href="plate-atlas.html" class="btn-dark">Learn More</a>
-            <a href="https://play.google.com/store/apps/details?id=com.nionlite.plateatlas" target="_blank" rel="noopener" class="btn-dark">Get it on Google Play</a>
-            <a href="https://apps.apple.com/us/app/plate-atlas/id6764467007" target="_blank" rel="noopener" class="btn-dark">Download on the App Store</a>
+            <div class="store-badges" aria-label="Download Plate Atlas">
+        <a class="store-badge" href="https://apps.apple.com/us/app/plate-atlas/id6764467007" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.nionlite.plateatlas" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+        </a>
+      </div>
           </div>
         </div>
         <div style="display:flex;align-items:center;justify-content:center;">
@@ -364,14 +377,14 @@
         </ul>
         <div class="app-btns">
           <a href="cub-rates.html" class="btn-dark">Learn More</a>
-          <a href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" class="btn-dark">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.65.19.97.07l13.2-7.62-2.82-2.83-11.35 10.38zm-1.85-20.1C1.12 3.95 1 4.28 1 4.64v14.72c0 .36.12.69.33.98l.09.08 8.24-8.24v-.2L1.42 3.57l-.09.09zm18.4 8.57l-2.52-1.45-3.06 3.06 3.06 3.07 2.54-1.47c.72-.42.72-1.79-.02-2.21zM4.15.28L17.35 7.9l-2.82 2.82L3.18.34C3.5.22 3.85.24 4.15.28z"/></svg>
-            Get it on Google Play
-          </a>
-          <a href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" class="btn-dark">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            Download on the App Store
-          </a>
+          <div class="store-badges" aria-label="Download CUB">
+        <a class="store-badge" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" aria-label="Download on the App Store">
+          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+        </a>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+        </a>
+      </div>
         </div>
       </div>
       <div style="display:flex;align-items:center;justify-content:center;">
@@ -471,22 +484,28 @@
           <div><span class="c-link-main">ByWhen</span><span class="c-link-sub">App Store and Google Play coming soon</span></div>
           <span class="arr">&#8594;</span>
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.nionlite.plateatlas" target="_blank" rel="noopener" class="c-link">
-          <div><span class="c-link-main">Plate Atlas on Google Play</span><span class="c-link-sub">Download the app for Android</span></div>
-          <span class="arr">&#8594;</span>
-        </a>
-        <a href="https://apps.apple.com/us/app/plate-atlas/id6764467007" target="_blank" rel="noopener" class="c-link">
-          <div><span class="c-link-main">Plate Atlas on the App Store</span><span class="c-link-sub">Download the app for iPhone</span></div>
-          <span class="arr">&#8594;</span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" class="c-link">
-          <div><span class="c-link-main">CUB on Google Play</span><span class="c-link-sub">Download the app for Android</span></div>
-          <span class="arr">&#8594;</span>
-        </a>
-        <a href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" class="c-link">
-          <div><span class="c-link-main">CUB on the App Store</span><span class="c-link-sub">Download the app for iPhone</span></div>
-          <span class="arr">&#8594;</span>
-        </a>
+        <div class="c-link" style="display:block;">
+          <div><span class="c-link-main">Download Plate Atlas</span><span class="c-link-sub">Available for iPhone and Android</span></div>
+          <div class="store-badges" style="margin-top:0.9rem;margin-bottom:0;" aria-label="Download Plate Atlas">
+            <a class="store-badge" href="https://apps.apple.com/us/app/plate-atlas/id6764467007" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+            </a>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.nionlite.plateatlas" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+            </a>
+          </div>
+        </div>
+        <div class="c-link" style="display:block;">
+          <div><span class="c-link-main">Download CUB</span><span class="c-link-sub">Available for iPhone and Android</span></div>
+          <div class="store-badges" style="margin-top:0.9rem;margin-bottom:0;" aria-label="Download CUB">
+            <a class="store-badge" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+            </a>
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+              <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+            </a>
+          </div>
+        </div>
         <a href="mailto:support@nionlite.com" class="c-link">
           <div><span class="c-link-main">Email Support</span><span class="c-link-sub">support@nionlite.com</span></div>
           <span class="arr">&#8594;</span>

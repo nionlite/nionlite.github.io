@@ -175,9 +175,14 @@
     .eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.7rem; }
     .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--accent); }
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.4rem, 8vw, 7rem); line-height: 0.96; font-weight: 300; letter-spacing: 0; margin-bottom: 1.5rem; }
+    .hero-title { font-size: clamp(2.7rem, 6.2vw, 5.4rem); line-height: 1.02; max-width: 620px; }
     h1 strong { color: var(--accent); font-weight: 600; }
     .hero-sub { max-width: 560px; font-size: 1.05rem; font-weight: 300; line-height: 1.78; color: var(--mid); margin-bottom: 2.2rem; }
     .cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.6rem; }
+    .store-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; margin-bottom: 1.6rem; }
+    .store-badge { display: inline-flex; align-items: center; min-height: 54px; transition: transform 0.15s, filter 0.2s; }
+    .store-badge:hover, .store-badge:focus-visible { transform: translateY(-1px); filter: brightness(1.06); outline: none; }
+    .store-badge img { display: block; height: 54px; width: auto; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
       min-height: 48px; padding: 0.85rem 1.45rem;
@@ -342,6 +347,7 @@
       .hero-inner { display: block; }
       .phone-stage { display: none; }
       h1 { font-size: clamp(3rem, 17vw, 5rem); }
+      .hero-title { font-size: clamp(2.45rem, 12vw, 4rem); }
       .feature-grid, .premium-grid, .faq-grid, .related-grid { grid-template-columns: 1fr; }
       .compare-row { grid-template-columns: 1fr; }
       .compare-row.header { display: none; }
@@ -354,6 +360,7 @@
       .rate-value { font-size: 3.4rem; }
       section { padding: 4.5rem 6%; }
       .cta-row { flex-direction: column; align-items: stretch; }
+      .store-badges { flex-direction: column; align-items: flex-start; }
       .btn { width: 100%; }
     }
   </style>
@@ -385,11 +392,15 @@
     <div class="hero-inner">
       <div>
         <div class="eyebrow">Credit Union Mortgage Rate Tracker</div>
-        <h1>CUB: <strong>Track Daily Mortgage Rate</strong></h1>
+        <h1 class="hero-title">CUB: <strong>Track Daily Mortgage Rate</strong></h1>
         <p class="hero-sub">Track published mortgage rates from credit unions and banks in one focused app. Compare current rates, inspect lender details, watch one-year history, and get alerts when rates drop.</p>
-        <div class="cta-row">
-          <a class="btn" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener">Download on the App Store</a>
-          <a class="btn" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener">Get it on Google Play</a>
+        <div class="store-badges" aria-label="Download CUB">
+          <a class="store-badge" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" aria-label="Download on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+          </a>
         </div>
         <div class="trust-line" aria-label="CUB highlights">
           <span>50+ lenders tracked</span>
@@ -629,9 +640,13 @@
   <section class="final-cta">
     <h2>Ready to compare mortgage rates?</h2>
     <p>Download CUB: Track Daily Mortgage Rate for iOS or Android and keep a cleaner watchlist for the credit unions and banks that matter to your search.</p>
-    <div class="cta-row" style="justify-content:center;margin-bottom:0;">
-      <a class="btn" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener">Download on the App Store</a>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener">Get it on Google Play</a>
+    <div class="store-badges" style="justify-content:center;margin-bottom:0;" aria-label="Download CUB">
+      <a class="store-badge" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" aria-label="Download on the App Store">
+        <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+      </a>
+      <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+      </a>
     </div>
   </section>
 
