@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://nionlite.com/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -38,14 +38,14 @@
 
   <url>
     <loc>https://nionlite.com/bywhen.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://nionlite.com/bywhen-privacy.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -108,7 +108,7 @@
 
   <url>
     <loc>https://nionlite.com/llms.txt</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
