@@ -45,7 +45,7 @@
     h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 6vw, 4.4rem); font-weight: 300; line-height: 1.08; margin-bottom: 1rem; }
     h1 em { font-style: italic; color: var(--accent); }
     .intro { max-width: 680px; font-size: 1rem; font-weight: 300; line-height: 1.85; color: var(--mid); margin-bottom: 3rem; }
-    .app-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.4rem; }
+    .app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
     .app-card {
       border: 1px solid var(--border); background: var(--bg2); padding: 2rem;
       display: flex; flex-direction: column; gap: 1.25rem; min-height: 260px;
@@ -53,7 +53,11 @@
     .app-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; }
     .app-card p { color: var(--mid); font-weight: 300; line-height: 1.75; font-size: 0.95rem; }
     .status { display: inline-flex; align-self: flex-start; border: 1px solid rgba(139,38,53,0.25); color: var(--accent); padding: 0.35rem 0.75rem; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
-    .links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: auto; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: auto; min-width: 0; }
+    .store-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; min-height: 50px; }
+    .store-badge { display: inline-flex; align-items: center; min-height: 50px; transition: transform 0.15s, filter 0.2s; }
+    .store-badge:hover, .store-badge:focus-visible { transform: translateY(-1px); filter: brightness(1.06); outline: none; }
+    .store-badge img { display: block; height: 50px; width: auto; }
     .legal-link {
       display: inline-flex; align-items: center; justify-content: center; min-height: 42px;
       padding: 0.7rem 1rem; background: var(--fg); color: var(--bg); text-decoration: none;
@@ -71,6 +75,9 @@
     @media (max-width: 760px) {
       .app-grid { grid-template-columns: 1fr; }
       nav { align-items: flex-start; gap: 1rem; }
+    }
+    @media (min-width: 761px) {
+      .legal-link { flex: 1 1 calc(50% - 0.8rem); white-space: nowrap; }
     }
   </style>
 </head>
@@ -94,6 +101,11 @@
           <a class="legal-link" href="haulmargin-privacy.html">Privacy Policy</a>
           <a class="legal-link secondary" href="haulmargin-terms.html">Terms of Use</a>
         </div>
+        <div class="store-badges" aria-label="Download HaulMargin">
+          <a class="store-badge" href="https://apps.apple.com/us/app/haulmargin/id6782427618" target="_blank" rel="noopener" aria-label="Download HaulMargin on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+          </a>
+        </div>
       </article>
 
       <article class="app-card">
@@ -103,6 +115,11 @@
         <div class="links">
           <a class="legal-link" href="bywhen-privacy.html">Privacy Policy</a>
           <a class="legal-link secondary" href="bywhen-terms.html">Terms of Use</a>
+        </div>
+        <div class="store-badges" aria-label="Download ByWhen">
+          <a class="store-badge" href="https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584" target="_blank" rel="noopener" aria-label="Download ByWhen on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+          </a>
         </div>
       </article>
 
@@ -115,6 +132,14 @@
           <a class="legal-link secondary" href="plate-atlas-terms.html">Terms of Use</a>
           <a class="legal-link secondary" href="plate-atlas-data-deletion.html">Data Deletion</a>
         </div>
+        <div class="store-badges" aria-label="Download Plate Atlas">
+          <a class="store-badge" href="https://apps.apple.com/us/app/plate-atlas/id6764467007" target="_blank" rel="noopener" aria-label="Download Plate Atlas on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.nionlite.plateatlas" target="_blank" rel="noopener" aria-label="Get Plate Atlas on Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+          </a>
+        </div>
       </article>
 
       <article class="app-card">
@@ -124,6 +149,14 @@
         <div class="links">
           <a class="legal-link" href="privacy.html">Privacy Policy</a>
           <a class="legal-link secondary" href="terms.html">Terms of Use</a>
+        </div>
+        <div class="store-badges" aria-label="Download CUB Rates">
+          <a class="store-badge" href="https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184" target="_blank" rel="noopener" aria-label="Download CUB Rates on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates" target="_blank" rel="noopener" aria-label="Get CUB Rates on Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+          </a>
         </div>
       </article>
     </section>
