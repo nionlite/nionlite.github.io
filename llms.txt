@@ -50,14 +50,15 @@ Key features:
 
 ### ByWhen
 
-ByWhen is a smart deadline reminder app available for iPhone on the App Store. Android is planned.
+ByWhen is a smart deadline reminder app available for iOS on the App Store and Android on Google Play.
 
 Primary page: https://nionlite.com/bywhen.html
 App Store: https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584
+Google Play: https://play.google.com/store/apps/details?id=com.nionlite.bywhen
 
 Key features:
 - Adaptive reminder planning based on deadline risk and task duration
-- Apple Calendar-aware reminder windows with optional Apple Reminders import
+- Calendar-aware reminder windows with Apple Calendar, Android Calendar, and optional Apple Reminders import
 - Sleep, work hours, workdays, and out-and-away task rules
 - Recurring daily, weekly, monthly, yearly, and selected-weekday tasks
 - Task-specific reminder styles and notification actions
