@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar-Aware Reminders: Plan Tasks Around Real Life - ByWhen</title>
+  <meta name="description" content="A guide to calendar-aware reminders and how busy blocks, sleep, work hours, task type, and deadline urgency can help choose better reminder windows." />
+  <link rel="canonical" href="https://nionlite.com/blog/calendar-aware-reminders-guide.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Calendar-Aware Reminders: Plan Tasks Around Real Life" />
+  <meta property="og:description" content="Calendar-aware reminders can avoid busy blocks and help find more realistic times to act before a deadline." />
+  <meta property="og:url" content="https://nionlite.com/blog/calendar-aware-reminders-guide.html" />
+  <meta property="og:image" content="https://nionlite.com/bywhen-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calendar-Aware Reminders: Plan Tasks Around Real Life" />
+  <meta name="twitter:description" content="Learn how calendar-aware reminders can avoid busy blocks and find more realistic task windows." />
+  <meta name="twitter:image" content="https://nionlite.com/bywhen-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Calendar-Aware Reminders: Plan Tasks Around Real Life",
+    "description": "A practical guide to calendar-aware reminders and why useful nudges should consider busy blocks, sleep, work hours, task type, and deadline urgency.",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "author": { "@type": "Organization", "name": "NiONlite LLC" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NiONlite LLC",
+      "logo": { "@type": "ImageObject", "url": "https://nionlite.com/bywhen-icon.png" }
+    },
+    "mainEntityOfPage": "https://nionlite.com/blog/calendar-aware-reminders-guide.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    :root { --bg:#f7f5f2; --bg2:#edeae5; --fg:#1c1c1c; --mid:#7a7469; --accent:#8b2635; --accent2:#b54455; --border:rgba(28,28,28,0.1); }
+    body { font-family:'DM Sans', sans-serif; background:var(--bg); color:var(--fg); }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:1.4rem 6%; background:rgba(247,245,242,0.95); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; backdrop-filter:blur(12px); }
+    .nav-logo { font-family:'Cormorant Garamond', serif; font-size:1.55rem; font-weight:600; letter-spacing:0.06em; color:var(--fg); text-decoration:none; }
+    .nav-logo span { color:var(--accent); }
+    .back-link { font-size:0.8rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--mid); text-decoration:none; }
+    .back-link:hover, a:hover { color:var(--accent); }
+    .article-hero { background:var(--bg2); padding:5rem 6% 4rem; border-bottom:1px solid var(--border); }
+    .article-tag { font-size:0.72rem; font-weight:500; letter-spacing:0.2em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; display:flex; align-items:center; gap:0.6rem; }
+    .article-tag::before { content:''; display:block; width:20px; height:1px; background:var(--accent); }
+    h1 { font-family:'Cormorant Garamond', serif; font-size:clamp(2rem, 5vw, 3.8rem); font-weight:300; line-height:1.1; max-width:850px; margin-bottom:1.4rem; }
+    h1 em { font-style:italic; color:var(--accent); }
+    .article-meta { font-size:0.8rem; color:var(--mid); display:flex; gap:1.5rem; }
+    main { max-width:760px; margin:0 auto; padding:4rem 6% 6rem; }
+    .lead { font-size:1.1rem; line-height:1.85; color:var(--fg); font-weight:300; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid var(--border); }
+    h2 { font-family:'Cormorant Garamond', serif; font-size:1.9rem; font-weight:400; margin:2.8rem 0 1rem; border-left:2px solid var(--accent); padding-left:1rem; }
+    p { font-size:0.97rem; font-weight:300; line-height:1.9; color:var(--mid); margin-bottom:1.2rem; }
+    p strong { color:var(--fg); font-weight:500; }
+    a { color:var(--accent); text-decoration:none; }
+    ul.article-list { list-style:none; margin:0.5rem 0 1.5rem; }
+    ul.article-list li { font-size:0.95rem; font-weight:300; line-height:1.8; color:var(--mid); padding:0.5rem 0; border-bottom:1px solid var(--border); display:flex; gap:0.8rem; }
+    ul.article-list li::before { content:'-'; color:var(--accent); flex-shrink:0; }
+    .highlight-box { background:var(--bg2); border-left:3px solid var(--accent); padding:1.5rem 1.8rem; margin:2rem 0; }
+    .highlight-box p { margin-bottom:0; color:var(--fg); }
+    .cta-box { margin-top:3rem; padding:2.5rem; background:var(--fg); color:var(--bg); text-align:center; }
+    .cta-box h3 { font-family:'Cormorant Garamond', serif; font-size:1.8rem; font-weight:300; color:var(--bg); margin-bottom:0.6rem; }
+    .cta-box p { color:rgba(247,245,242,0.7); margin-bottom:1.5rem; font-size:0.9rem; }
+    .cta-btns { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
+    .related { margin-top:4rem; padding-top:2rem; border-top:1px solid var(--border); }
+    .related h3 { font-family:'Cormorant Garamond', serif; font-size:1.4rem; font-weight:400; margin-bottom:1.2rem; }
+    .related-links { display:flex; flex-direction:column; gap:0.8rem; }
+    footer { padding:2rem 6%; border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+    .footer-logo { font-family:'Cormorant Garamond', serif; font-size:1.1rem; font-weight:600; }
+    .footer-logo span { color:var(--accent); }
+    footer p, footer a { font-size:0.78rem; color:var(--mid); text-decoration:none; }
+    .store-badges { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.85rem; margin:0.2rem 0 1.2rem; }
+    .store-badge { display:inline-flex; align-items:center; min-height:54px; transition:transform 0.15s, filter 0.2s; }
+    .store-badge:hover, .store-badge:focus-visible { transform:translateY(-1px); filter:brightness(1.06); outline:none; }
+    .store-badge img { display:block; height:54px; width:auto; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">NiON<span>lite</span></a>
+    <a href="../index.html#blog" class="back-link">Back to Blog</a>
+  </nav>
+
+  <div class="article-hero">
+    <div class="article-tag">Calendar-Aware Planning</div>
+    <h1>Calendar-Aware Reminders: Plan Tasks Around <em>Real Life</em></h1>
+    <div class="article-meta"><span>July 2026</span><span>5 min read</span></div>
+  </div>
+
+  <main>
+    <p class="lead">A reminder that arrives during a meeting, commute, sleep window, or packed work block is technically on time but practically useless. Calendar-aware reminders help tasks fit into the day you actually have.</p>
+
+    <h2>What calendar-aware reminders solve</h2>
+    <p>Traditional reminders are fixed. They ring at the time you chose, even if that time has become unrealistic. Calendar-aware planning starts from a different assumption: your day changes, and reminder windows should respect that.</p>
+    <p>This matters most for tasks that require action before a due date. If a task needs 30 minutes and your calendar is full until late afternoon, the next useful nudge should understand the difference between "free" and "actually able to start."</p>
+
+    <h2>Busy blocks are only one part of the picture</h2>
+    <p>A calendar can show meetings and appointments, but better reminder planning also needs rhythm. Sleep, wake time, work hours, workdays, and task type all change what counts as a good reminder window.</p>
+    <ul class="article-list">
+      <li><span>A call may be best during business hours.</span></li>
+      <li><span>An errand away from home or work may need to avoid work hours.</span></li>
+      <li><span>Deep work may need a longer open window than a quick admin task.</span></li>
+      <li><span>A reminder after bedtime may create noise without helping completion.</span></li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Good reminder timing is contextual:</strong> a usable window for a 10-minute call may be too short for a 90-minute writing task.</p>
+    </div>
+
+    <h2>How ByWhen uses calendar context</h2>
+    <p><a href="../bywhen.html">ByWhen</a> can use Apple Calendar on iOS and Android Calendar on Android to create busy blocks the planner avoids when suggesting reminder windows. You remain in control of calendar permission and can manage what should count for scheduling.</p>
+    <p>Calendar blocks are combined with other task details such as deadline, remaining effort, priority, task type, and reminder style. This lets ByWhen explain why a nudge is happening and whether a task is on track, at risk, critical, or past due.</p>
+
+    <h2>When calendar-aware reminders help most</h2>
+    <ul class="article-list">
+      <li><span>Workdays with meetings and scattered open blocks.</span></li>
+      <li><span>Study or assignment planning before a due date.</span></li>
+      <li><span>Personal admin tasks that keep getting pushed later.</span></li>
+      <li><span>Errands that need daylight, store hours, or travel time.</span></li>
+      <li><span>Recurring tasks that need to come back in the next cycle, not immediately after completion.</span></li>
+    </ul>
+
+    <h2>Privacy still matters</h2>
+    <p>Calendar-aware does not need to mean cloud-heavy. ByWhen is designed so planning runs from data stored locally on your device. Your tasks, deadline plans, rhythm settings, and calendar blocks stay on the device unless you choose to export a backup.</p>
+
+    <div class="cta-box">
+      <h3>Try smarter reminder windows</h3>
+      <p>ByWhen helps plan deadline nudges around calendar blocks, rhythm, task type, and urgency.</p>
+      <div class="cta-btns">
+        <div class="store-badges" aria-label="Download ByWhen">
+          <a class="store-badge" href="https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584" target="_blank" rel="noopener" aria-label="Download ByWhen on the App Store">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
+          </a>
+          <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.nionlite.bywhen" target="_blank" rel="noopener" aria-label="Get ByWhen on Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="related">
+      <h3>Related ByWhen Guides</h3>
+      <div class="related-links">
+        <a href="smart-deadline-reminder-app.html">Smart Deadline Reminder App: Why One Alarm Is Not Enough</a>
+        <a href="recurring-reminders-for-chores-errands.html">Recurring Reminders for Chores, Errands, and Admin Tasks</a>
+        <a href="../bywhen.html">Learn more about ByWhen</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-logo">NiON<span>lite</span> LLC</div>
+    <p>&copy; 2025 NiONlite LLC. All rights reserved.</p>
+    <a href="../legal.html">Legal</a>
+  </footer>
+</body>
+</html>
