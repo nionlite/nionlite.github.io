@@ -65,6 +65,11 @@ Key features:
 - 7 days of ByWhen Premium without account creation or payment details
 - Privacy-focused planning with task data kept on device unless the user exports a backup
 
+ByWhen guides:
+- https://nionlite.com/blog/smart-deadline-reminder-app.html
+- https://nionlite.com/blog/calendar-aware-reminders-guide.html
+- https://nionlite.com/blog/recurring-reminders-for-chores-errands.html
+
 ## Site Map
 
 Sitemap: https://nionlite.com/sitemap.xml

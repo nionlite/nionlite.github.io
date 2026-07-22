@@ -190,5 +190,26 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://nionlite.com/blog/smart-deadline-reminder-app.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nionlite.com/blog/calendar-aware-reminders-guide.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nionlite.com/blog/recurring-reminders-for-chores-errands.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
 
