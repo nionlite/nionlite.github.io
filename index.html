@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NiONlite - Mobile Apps: HaulMargin, ByWhen, Plate Atlas, and CUB</title>
-  <meta name="description" content="NiONlite builds HaulMargin, ByWhen, Plate Atlas, and CUB: focused mobile apps for freight profitability, smart reminders, restaurant menu guidance, food journaling, and mortgage rate tracking." />
+  <title>NiONlite Mobile Apps | CUB, ByWhen, Plate Atlas &amp; HaulMargin</title>
+  <meta name="description" content="Explore NiONlite mobile apps for mortgage rate tracking, deadline reminders, restaurant menu guidance, food journaling, and freight load profitability." />
   <link rel="canonical" href="https://nionlite.com/" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="NiONlite - Mobile Apps: HaulMargin, ByWhen, Plate Atlas, and CUB" />
+  <meta property="og:site_name" content="NiONlite" />
+  <meta property="og:title" content="NiONlite Mobile Apps | CUB, ByWhen, Plate Atlas &amp; HaulMargin" />
   <meta property="og:description" content="NiONlite builds focused mobile apps for freight profitability, smart reminders, restaurant menu guidance, food journaling, and mortgage rate tracking." />
   <meta property="og:url" content="https://nionlite.com/" />
   <meta property="og:image" content="https://nionlite.com/plate-atlas-icon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NiONlite - Mobile Apps: HaulMargin, ByWhen, Plate Atlas, and CUB" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="NiONlite Mobile Apps | CUB, ByWhen, Plate Atlas &amp; HaulMargin" />
   <meta name="twitter:description" content="NiONlite builds focused mobile apps for freight profitability, smart reminders, restaurant menu guidance, food journaling, and mortgage rate tracking." />
   <meta name="twitter:image" content="https://nionlite.com/plate-atlas-icon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NiONlite LLC",
-    "url": "https://nionlite.com/",
-    "sameAs": [
-      "https://nionlite.com/haulmargin.html",
-      "https://apps.apple.com/us/app/haulmargin/id6782427618",
-      "https://nionlite.com/bywhen.html",
-      "https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584",
-      "https://play.google.com/store/apps/details?id=com.nionlite.bywhen",
-      "https://apps.apple.com/us/app/plate-atlas/id6764467007",
-      "https://play.google.com/store/apps/details?id=com.nionlite.plateatlas",
-      "https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184",
-      "https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://nionlite.com/#organization",
+        "name": "NiONlite LLC",
+        "url": "https://nionlite.com/",
+        "email": "support@nionlite.com",
+        "description": "Independent mobile app studio building focused iOS and Android applications."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://nionlite.com/#website",
+        "url": "https://nionlite.com/",
+        "name": "NiONlite",
+        "publisher": { "@id": "https://nionlite.com/#organization" }
+      }
     ]
   }
   </script>
@@ -224,11 +229,11 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">NiON<span>lite</span></a>
+    <a href="index.html" class="nav-logo" aria-label="NiONlite home">NiON<span>lite</span></a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#app">Our Apps</a></li>
-      <li><a href="#blog">Blog</a></li>
+      <li><a href="blog/index.html">Guides</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="legal.html">Legal</a></li>
     </ul>
@@ -241,7 +246,7 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="#about"   onclick="closeMobileNav()">About</a>
     <a href="#app"     onclick="closeMobileNav()">Our Apps</a>
-    <a href="#blog"    onclick="closeMobileNav()">Blog</a>
+    <a href="blog/index.html">Guides</a>
     <a href="#contact" onclick="closeMobileNav()">Contact</a>
     <a href="legal.html">Legal</a>
   </div>
@@ -252,8 +257,8 @@
     <div class="hero-block"></div>
     <div class="hero-content">
       <div class="eyebrow">Mobile App Development</div>
-      <h1>Building apps that <em>matter.</em></h1>
-      <p class="hero-sub">NiONlite is an independent mobile application development studio. We design and build focused, high-quality apps for iOS and Android that solve real problems for real people.</p>
+      <h1>NiONlite <em>mobile apps</em> for real work.</h1>
+      <p class="hero-sub">Explore focused iPhone and Android apps for mortgage research, deadline planning, restaurant menu guidance, food journaling, and freight load profitability.</p>
       <a href="#app" class="btn-dark">Our Work <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <a href="#contact" class="btn-ghost">Get in Touch</a>
     </div>
@@ -312,7 +317,7 @@
             <div class="p-screen">
               <div class="p-head">HaulMargin</div>
               <div style="display:flex;justify-content:center;margin-bottom:0.8rem;">
-                <img src="haulmargin-icon.png" alt="HaulMargin app icon" style="width:56px;height:56px;border-radius:12px;box-shadow:0 10px 24px rgba(37,113,79,0.22);" />
+                <img src="haulmargin-icon.png" alt="HaulMargin freight profit calculator app icon" width="56" height="56" loading="lazy" decoding="async" style="width:56px;height:56px;border-radius:12px;box-shadow:0 10px 24px rgba(37,113,79,0.22);" />
               </div>
               <div class="p-dish">Baltimore to Charlotte</div>
               <div class="p-pill" style="background:rgba(37,113,79,0.16);color:#25714f;">Book</div>
@@ -355,7 +360,7 @@
             <div class="p-screen">
               <div class="p-head">ByWhen</div>
               <div style="display:flex;justify-content:center;margin-bottom:0.8rem;">
-                <img src="bywhen-icon.png" alt="ByWhen app icon" style="width:56px;height:56px;border-radius:12px;box-shadow:0 10px 24px rgba(240,100,79,0.22);" />
+                <img src="bywhen-icon.png" alt="ByWhen smart deadline reminder app icon" width="56" height="56" loading="lazy" decoding="async" style="width:56px;height:56px;border-radius:12px;box-shadow:0 10px 24px rgba(240,100,79,0.22);" />
               </div>
               <div class="p-dish">Finish proposal</div>
               <div class="p-pill" style="background:rgba(200,63,98,0.16);color:#b02649;">Critical</div>
@@ -441,14 +446,14 @@
       <div style="display:flex;align-items:center;justify-content:center;">
         <div class="phone">
           <div class="p-screen">
-            <div class="p-head">CUB — 30yr Fixed</div>
-            <div class="p-row"><span class="p-bank">Navy Federal CU</span><span class="p-rate">6.500%</span></div>
-            <div class="p-row"><span class="p-bank">PenFed CU</span><span class="p-rate">6.375%</span></div>
-            <div class="p-row"><span class="p-bank">Alliant CU</span><span class="p-rate">6.625%</span></div>
-            <div class="p-row"><span class="p-bank">Golden 1 CU</span><span class="p-rate">6.750%</span></div>
-            <div class="p-row"><span class="p-bank">First Tech FCU</span><span class="p-rate">6.490%</span></div>
-            <div class="p-row"><span class="p-bank">Star One CU</span><span class="p-rate">6.625%</span></div>
-            <div class="p-row"><span class="p-bank">Patelco CU</span><span class="p-rate">6.550%</span></div>
+            <div class="p-head">Illustrative rates - not current</div>
+            <div class="p-row"><span class="p-bank">Example Credit Union A</span><span class="p-rate">6.500%</span></div>
+            <div class="p-row"><span class="p-bank">Example Credit Union B</span><span class="p-rate">6.375%</span></div>
+            <div class="p-row"><span class="p-bank">Example Credit Union C</span><span class="p-rate">6.625%</span></div>
+            <div class="p-row"><span class="p-bank">Example Credit Union D</span><span class="p-rate">6.750%</span></div>
+            <div class="p-row"><span class="p-bank">Example Credit Union E</span><span class="p-rate">6.490%</span></div>
+            <div class="p-row"><span class="p-bank">Example Credit Union F</span><span class="p-rate">6.625%</span></div>
+            <div class="p-row"><span class="p-bank">Example Credit Union G</span><span class="p-rate">6.550%</span></div>
           </div>
         </div>
       </div>
@@ -515,25 +520,25 @@
         <div class="blog-body">
           <div class="blog-tag">Mortgage Rates</div>
           <div class="blog-ttl">Credit Unions vs Banks: Who Offers Better Mortgage Rates?</div>
-          <div class="blog-exc">Most homebuyers go straight to their bank for a mortgage — but credit unions consistently offer lower rates. Here is what the data shows and how to take advantage of it.</div>
+          <div class="blog-exc">Credit unions and banks price mortgages differently. Learn how to compare rate, APR, fees, eligibility, and standardized Loan Estimates.</div>
         </div>
-        <div class="blog-foot"><span class="blog-date">March 2026</span><span class="blog-arr">Read &#8594;</span></div>
+        <div class="blog-foot"><span class="blog-date">Updated August 2026</span><span class="blog-arr">Read &#8594;</span></div>
       </a>
       <a href="best-credit-union-mortgage-rates-virginia.html" class="blog-card">
         <div class="blog-body">
           <div class="blog-tag">Virginia</div>
-          <div class="blog-ttl">Best Credit Union Mortgage Rates in Virginia (2026)</div>
-          <div class="blog-exc">Virginia has a strong network of credit unions offering competitive 30-year fixed and ARM rates. We track them all daily — here are the ones worth knowing about.</div>
+          <div class="blog-ttl">Virginia Credit Union Mortgage Rates: 2026 Comparison Guide</div>
+          <div class="blog-exc">A practical way to compare Virginia credit unions by published rate, APR, points, fees, membership, and state availability.</div>
         </div>
-        <div class="blog-foot"><span class="blog-date">March 2026</span><span class="blog-arr">Read &#8594;</span></div>
+        <div class="blog-foot"><span class="blog-date">Updated August 2026</span><span class="blog-arr">Read &#8594;</span></div>
       </a>
       <a href="how-to-get-lowest-mortgage-rate.html" class="blog-card">
         <div class="blog-body">
           <div class="blog-tag">Home Buying Tips</div>
-          <div class="blog-ttl">5 Ways to Get the Lowest Mortgage Rate Possible</div>
-          <div class="blog-exc">Your mortgage rate is not just handed to you — it is negotiated. From credit score improvements to rate shopping strategies, here is how to get the best deal.</div>
+          <div class="blog-ttl">How to Get a Lower Mortgage Rate: 5 Practical Steps</div>
+          <div class="blog-exc">Improve your mortgage shopping process with stronger credit, comparable Loan Estimates, careful point analysis, and a clear rate-lock plan.</div>
         </div>
-        <div class="blog-foot"><span class="blog-date">March 2026</span><span class="blog-arr">Read &#8594;</span></div>
+        <div class="blog-foot"><span class="blog-date">Updated August 2026</span><span class="blog-arr">Read &#8594;</span></div>
       </a>
     </div>
   </section>

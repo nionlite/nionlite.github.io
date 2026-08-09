@@ -32,6 +32,9 @@ Useful CUB pages:
 - https://nionlite.com/compare-credit-union-mortgage-rates-by-state.html
 - https://nionlite.com/mortgage-rate-calculator-extra-payments.html
 - https://nionlite.com/cub-vs-lender-websites.html
+- https://nionlite.com/credit-unions-vs-banks-mortgage-rates.html
+- https://nionlite.com/best-credit-union-mortgage-rates-virginia.html
+- https://nionlite.com/how-to-get-lowest-mortgage-rate.html
 
 ### Plate Atlas
 
@@ -72,5 +75,6 @@ ByWhen guides:
 
 ## Site Map
 
+Guide archive: https://nionlite.com/blog/
 Sitemap: https://nionlite.com/sitemap.xml
 Robots: https://nionlite.com/robots.txt
