@@ -7,6 +7,23 @@ Contact: support@nionlite.com
 
 ## Apps
 
+### Contractor
+
+Contractor is an iOS modular field proposal and estimating app for contractors. It helps contractors create customer projects, add job site photos and trade-specific manual measurements, generate AI-assisted design and estimate drafts, build Good / Better / Best packages, publish proposals, record approvals, manually confirm deposits and payments, create invoices, and close projects.
+
+Primary page: https://nionlite.com/contractor.html
+Privacy Policy: https://nionlite.com/contractor-privacy.html
+Terms of Use: https://nionlite.com/contractor-terms.html
+
+Key features:
+- Contractor-first proposal workflow for field sales
+- Module-specific workflows for landscaping, decks, patios, porches, painting, kitchen redesign, bathroom remodeling, and room design
+- Good / Better / Best proposal packages
+- AI-assisted draft ideas and estimates with contractor review before publishing
+- Local-first project workspace, backup export, proposal approval, manual payment tracking, invoice, and closeout flow
+
+Contractor is not a guaranteed estimating, legal, accounting, payment processing, or construction compliance service. Contractors are responsible for final measurements, pricing, scope, taxes, terms, approvals, payments, and customer commitments.
+
 ### CUB: Track daily Mortgage rate
 
 CUB: Track daily Mortgage rate is a finance app for iOS and Android that helps users compare published mortgage rates from credit unions and banks.

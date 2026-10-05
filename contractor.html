@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contractor Proposal App for Field Estimates, Packages &amp; Invoices | NiONlite</title>
+  <meta name="description" content="Contractor is a modular AI field proposal platform for contractors. Create customer projects, photos, measurements, AI-assisted estimates, Good Better Best packages, proposals, approvals, deposits, invoices, and closeout records across landscaping, painting, remodeling, outdoor living, kitchen, bath, and room design modules." />
+  <link rel="canonical" href="https://nionlite.com/contractor.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contractor - Modular AI Field Proposal Platform" />
+  <meta property="og:description" content="Create contractor proposals from field photos, measurements, AI-assisted drafts, trade modules, Good Better Best packages, approvals, deposits, invoices, and closeout records." />
+  <meta property="og:url" content="https://nionlite.com/contractor.html" />
+  <meta property="og:image" content="https://nionlite.com/contractor-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contractor - Modular AI Field Proposal Platform" />
+  <meta name="twitter:description" content="A contractor-first mobile workflow for proposals, estimates, packages, approvals, payments, invoices, and closeout across multiple trade modules." />
+  <meta name="twitter:image" content="https://nionlite.com/contractor-icon.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Contractor",
+    "alternateName": "Contractor Field Proposals",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "iOS",
+    "url": "https://nionlite.com/contractor.html",
+    "description": "Contractor is a modular AI field proposal platform for contractors, with workflows for customer projects, site photos, measurements, estimates, Good Better Best packages, branded proposals, approvals, deposits, invoices, and closeout records.",
+    "image": "https://nionlite.com/contractor-icon.png",
+    "isAccessibleForFree": true,
+    "featureList": [
+      "Customer and project creation",
+      "Job site photos and manual measurements",
+      "Module-specific fields for landscaping, outdoor living, painting, kitchen, bathroom, and room design workflows",
+      "AI-assisted design ideas and estimate drafts",
+      "Editable material, labor, markup, tax, and deposit assumptions",
+      "Good Better Best proposal packages",
+      "Proposal publishing, sharing, approval records, manual deposit tracking, invoices, manual payment confirmation, and project closeout",
+      "Local-first workspace with backup export and restore"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "category": "Subscription",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free trial with optional monthly or annual Contractor Pro subscription."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "NiONlite LLC",
+      "url": "https://nionlite.com/"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&amp;family=DM+Sans:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #151d1a;
+      --paper: #f7f5f2;
+      --panel: #edeae5;
+      --white: #fffdf8;
+      --deep: #184f40;
+      --field: #2f765d;
+      --paint: #315f8f;
+      --kitchen: #a05f2a;
+      --bath: #4f7893;
+      --room: #7a4f86;
+      --outdoor: #826330;
+      --sage: #9bb6a7;
+      --lime: #dbe7b9;
+      --accent: #8b2635;
+      --muted: #716d66;
+      --line: rgba(21, 29, 26, 0.12);
+      --shadow: 0 24px 70px rgba(21, 29, 26, 0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: fixed; inset: 0 0 auto; z-index: 30;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 6%; background: rgba(247,245,242,0.93); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-weight: 800; letter-spacing: 0.03em; }
+    .brand img { width: 34px; height: 34px; border-radius: 8px; box-shadow: 0 8px 20px rgba(47,118,93,0.2); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { font-size: 0.76rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .nav-links a:hover { color: var(--field); }
+    .hero {
+      position: relative; min-height: 98vh; display: flex; align-items: center; justify-content: center;
+      padding: 8rem 6% 4rem; overflow: hidden;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(219,231,185,0.7), transparent 23%),
+        linear-gradient(135deg, rgba(47,118,93,0.14), transparent 34%),
+        linear-gradient(225deg, rgba(139,38,53,0.08), transparent 38%),
+        var(--paper);
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: auto -8% 0 auto; width: 56%; height: 78%;
+      background: var(--panel); clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .hero-inner { position: relative; z-index: 1; width: min(1180px, 100%); display: grid; grid-template-columns: 1.04fr 0.96fr; gap: 3.2rem; align-items: center; }
+    .app-icon { width: 104px; height: 104px; border-radius: 24px; box-shadow: var(--shadow); margin-bottom: 1.4rem; }
+    .eyebrow, .label { color: var(--field); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 8.6vw, 7.2rem); line-height: 0.92; font-weight: 700; letter-spacing: 0; margin-bottom: 1.2rem; }
+    h1 em, h2 em { color: var(--field); font-style: italic; font-weight: 400; }
+    .hero-sub { max-width: 720px; font-size: clamp(1.03rem, 1.8vw, 1.25rem); line-height: 1.75; color: var(--muted); font-weight: 300; margin-bottom: 2rem; }
+    .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem; margin-bottom: 1.4rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; min-height: 48px; padding: 0.85rem 1.15rem; border-radius: 9px; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid var(--ink); }
+    .btn.dark { background: var(--ink); color: var(--paper); }
+    .btn.dark:hover { background: var(--field); border-color: var(--field); }
+    .btn.light { background: rgba(255,255,255,0.52); color: var(--ink); border-color: var(--line); }
+    .soon { color: var(--muted); font-size: 0.92rem; line-height: 1.75; max-width: 720px; }
+    .module-strip { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 1.25rem 0 1.5rem; }
+    .module-chip { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.48); color: var(--muted); font-size: 0.78rem; font-weight: 800; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--field); }
+    .phone { width: min(370px, 100%); margin: 0 auto; border: 1px solid rgba(21,29,26,0.15); border-radius: 38px; background: #101815; padding: 14px; box-shadow: var(--shadow); }
+    .screen { min-height: 640px; border-radius: 28px; padding: 1.2rem; background: #f3f6f2; display: flex; flex-direction: column; gap: 0.9rem; }
+    .screen-head { display: flex; justify-content: space-between; align-items: center; color: var(--deep); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .mini-card { background: var(--white); border: 1px solid rgba(21,29,26,0.08); border-radius: 20px; padding: 1rem; box-shadow: 0 12px 32px rgba(21,29,26,0.06); }
+    .mini-title { color: var(--ink); font-weight: 800; margin-bottom: 0.35rem; }
+    .mini-copy { color: var(--muted); font-size: 0.83rem; line-height: 1.55; }
+    .pill { display: inline-flex; align-self: flex-start; background: rgba(47,118,93,0.14); color: var(--field); padding: 0.36rem 0.64rem; border-radius: 999px; font-size: 0.72rem; font-weight: 800; margin-top: 0.7rem; }
+    .package-row { display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(21,29,26,0.09); padding-top: 0.75rem; margin-top: 0.75rem; color: var(--muted); font-size: 0.82rem; }
+    .price { color: var(--field); font-weight: 800; }
+    section { padding: 6rem 6%; }
+    .section-inner { width: min(1140px, 100%); margin: 0 auto; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5.8vw, 4.6rem); line-height: 1; font-weight: 400; margin-bottom: 1.2rem; }
+    .lead { max-width: 800px; color: var(--muted); font-size: 1.05rem; line-height: 1.85; font-weight: 300; margin-bottom: 2.4rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .card { background: var(--white); border: 1px solid var(--line); padding: 1.5rem; min-height: 210px; position: relative; overflow: hidden; }
+    .card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--field); }
+    .card h3 { font-size: 1.08rem; margin-bottom: 0.7rem; }
+    .card p, .card li { color: var(--muted); font-size: 0.94rem; line-height: 1.75; font-weight: 300; }
+    .card ul { list-style: none; }
+    .card li { padding: 0.35rem 0 0.35rem 1.2rem; position: relative; border-bottom: 1px solid var(--line); }
+    .card li::before { content: "-"; color: var(--field); position: absolute; left: 0; }
+    .card li:last-child { border-bottom: 0; }
+    .deep { background: var(--deep); color: var(--paper); }
+    .deep .label, .deep h2 em { color: var(--lime); }
+    .deep .lead { color: rgba(247,245,242,0.78); }
+    .deep .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+    .deep .card h3 { color: var(--paper); }
+    .deep .card p, .deep .card li { color: rgba(247,245,242,0.78); border-color: rgba(255,255,255,0.12); }
+    .module-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .module-card { background: var(--white); border: 1px solid var(--line); padding: 1.35rem; border-radius: 0; min-height: 240px; }
+    .module-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+    .module-icon { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(47,118,93,0.12); color: var(--field); font-weight: 900; }
+    .module-status { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 800; }
+    .module-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .module-card p { color: var(--muted); line-height: 1.7; font-size: 0.92rem; font-weight: 300; }
+    .steps { counter-reset: step; display: grid; gap: 1rem; }
+    .step { counter-increment: step; display: grid; grid-template-columns: 62px 1fr; gap: 1.2rem; align-items: start; padding: 1.35rem; background: var(--white); border: 1px solid var(--line); }
+    .step-num { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--paper); font-weight: 800; }
+    .step-num::before { content: counter(step, decimal-leading-zero); }
+    .step h3 { margin-bottom: 0.35rem; }
+    .step p { color: var(--muted); line-height: 1.75; font-weight: 300; }
+    .compare { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--line); overflow: hidden; }
+    .compare th, .compare td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .compare th { background: var(--panel); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .compare td { color: var(--muted); line-height: 1.6; font-size: 0.92rem; }
+    .compare strong { color: var(--ink); }
+    .pricing { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .price-cards { display: grid; grid-template-columns: 0.9fr 1.1fr 1fr; gap: 1.2rem; align-items: stretch; }
+    .price-card { background: var(--white); border: 1px solid var(--line); padding: 1.6rem; }
+    .price-card.featured { border-color: rgba(47,118,93,0.35); box-shadow: 0 18px 45px rgba(47,118,93,0.1); }
+    .price-name { font-weight: 800; margin-bottom: 0.4rem; }
+    .price-value { font-family: 'Cormorant Garamond', serif; font-size: 3rem; line-height: 1; color: var(--field); margin: 0.6rem 0; }
+    .price-card p { color: var(--muted); line-height: 1.75; font-weight: 300; font-size: 0.94rem; }
+    .legal-strip { background: var(--paper); }
+    .legal-links { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+    .faq-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .faq { background: var(--white); border: 1px solid var(--line); padding: 1.35rem; }
+    .faq h3 { font-size: 1rem; margin-bottom: 0.6rem; }
+    .faq p { color: var(--muted); line-height: 1.75; font-weight: 300; font-size: 0.93rem; }
+    footer { padding: 2rem 6%; border-top: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    footer p, footer a { color: var(--muted); font-size: 0.78rem; }
+    .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    @media (max-width: 980px) { .hero-inner, .grid, .grid.two, .module-grid, .price-cards, .faq-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .hero { padding-top: 7rem; } .screen { min-height: auto; } .compare { display: block; overflow-x: auto; } }
+    @media (max-width: 620px) { section { padding: 4.5rem 6%; } .step { grid-template-columns: 1fr; } h1 { font-size: 3.6rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="contractor.html" class="brand"><img src="contractor-icon.png" alt="Contractor app icon" /> Contractor</a>
+    <div class="nav-links">
+      <a href="index.html">NiONlite</a>
+      <a href="#modules">Modules</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#pricing">Pricing</a>
+      <a href="contractor-privacy.html">Privacy</a>
+      <a href="contractor-terms.html">Terms</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <img class="app-icon" src="contractor-icon.png" alt="Contractor app icon" />
+          <div class="eyebrow">Modular field proposal platform</div>
+          <h1>Build professional proposals from the <em>job site.</em></h1>
+          <p class="hero-sub">Contractor is a contractor-first mobile app for creating customer-ready estimates, design concepts, Good / Better / Best packages, approvals, deposits, invoices, and closeout records across multiple trade modules.</p>
+          <div class="module-strip" aria-label="Supported Contractor modules">
+            <span class="module-chip"><span class="dot" style="background:var(--field)"></span>Landscaping</span>
+            <span class="module-chip"><span class="dot" style="background:var(--outdoor)"></span>Decks, patios &amp; porches</span>
+            <span class="module-chip"><span class="dot" style="background:var(--paint)"></span>Painting</span>
+            <span class="module-chip"><span class="dot" style="background:var(--kitchen)"></span>Kitchen redesign</span>
+            <span class="module-chip"><span class="dot" style="background:var(--bath)"></span>Bathroom remodeling</span>
+            <span class="module-chip"><span class="dot" style="background:var(--room)"></span>Room design</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn dark" href="#workflow">See the workflow</a>
+            <a class="btn light" href="#modules">View modules</a>
+          </div>
+          <p class="soon">The first release is iOS-focused and local-first. It is built for contractors who need to move from site visit to proposal quickly while keeping final control over measurements, pricing, scope, and customer commitments.</p>
+        </div>
+        <div class="phone" aria-label="Contractor app proposal preview">
+          <div class="screen">
+            <div class="screen-head"><span>Proposal Review</span><span>Ready</span></div>
+            <div class="mini-card">
+              <div class="mini-title">Front yard refresh</div>
+              <p class="mini-copy">Landscaping module · Yard refresh · Photos, measurements, materials, labor, and package differences reviewed.</p>
+              <span class="pill">Ready to publish</span>
+            </div>
+            <div class="mini-card">
+              <div class="mini-title">AI design idea draft</div>
+              <p class="mini-copy">Low-maintenance planting beds, fresh mulch, clean edging, and a simple focal area near the walkway.</p>
+            </div>
+            <div class="mini-card">
+              <div class="mini-title">Good / Better / Best</div>
+              <div class="package-row"><span>Good refresh</span><span class="price">$2,840</span></div>
+              <div class="package-row"><span>Better curb appeal</span><span class="price">$4,960</span></div>
+              <div class="package-row"><span>Best full makeover</span><span class="price">$7,420</span></div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-title">Approval to closeout</div>
+              <p class="mini-copy">Publish, share, record approval, manually confirm deposit, send invoice, confirm final payment, and close the project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="label">Not a generic design toy</div>
+        <h2>A proposal engine for <em>contractors.</em></h2>
+        <p class="lead">Generic AI design apps show pretty ideas. Contractor is built around the business workflow: capture the job, estimate the work, package the options, publish a branded proposal, get approval, track deposit, send an invoice, and close the project.</p>
+        <div class="grid">
+          <article class="card"><h3>Contractor-first workflow</h3><p>Every screen is aimed at helping a contractor leave the site with a clear proposal path: customer, project, photos, measurements, notes, package options, terms, approval, and follow-up.</p></article>
+          <article class="card"><h3>Trade-specific modules</h3><p>Each module can define its own fields, job types, materials, formulas, AI prompts, design styles, proposal sections, and pricing assumptions.</p></article>
+          <article class="card"><h3>Human control before publishing</h3><p>AI can draft ideas and estimates, but the contractor reviews and controls measurements, costs, labor, markup, scope, taxes, deposits, and exclusions before anything is sent.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="deep" id="modules">
+      <div class="section-inner">
+        <div class="label">Module-based architecture</div>
+        <h2>One app, many <em>contractor niches.</em></h2>
+        <p class="lead">Contractor is not only for landscaping. Landscaping is the first module, but the product is designed as a modular contractor platform where each niche has its own measurements, materials, pricing formulas, AI prompts, and proposal templates.</p>
+        <div class="module-grid">
+          <article class="module-card"><div class="module-top"><div class="module-icon" style="background:rgba(47,118,93,0.14);color:var(--field)">L</div><span class="module-status">First module</span></div><h3>Landscaping</h3><p>Yard refresh, full makeover, mulch, flower beds, sod, pavers, walkways, edging, plant quantities, gravel, labor, cleanup, delivery, disposal, markup, and proposal packages.</p></article>
+          <article class="module-card"><div class="module-top"><div class="module-icon" style="background:rgba(130,99,48,0.14);color:var(--outdoor)">D</div><span class="module-status">Outdoor living</span></div><h3>Decks, patios &amp; porches</h3><p>Outdoor living projects can track square footage, decking or patio surface, railing, steps, demo, footings, upgrades, premium quantities, labor allowances, and material tiers.</p></article>
+          <article class="module-card"><div class="module-top"><div class="module-icon" style="background:rgba(49,95,143,0.14);color:var(--paint)">P</div><span class="module-status">Trade module</span></div><h3>Painting</h3><p>Interior or exterior painting workflows can use wall area, room count, surface prep, trim, doors, ceilings, coats, paint quality, primer, labor hours, cleanup, and package upgrades.</p></article>
+          <article class="module-card"><div class="module-top"><div class="module-icon" style="background:rgba(160,95,42,0.14);color:var(--kitchen)">K</div><span class="module-status">Remodel module</span></div><h3>Kitchen redesign</h3><p>Kitchen proposals can focus on layout refresh, cabinet work, countertops, backsplash, fixtures, flooring, appliance allowances, demo, installation labor, and design tiers.</p></article>
+          <article class="module-card"><div class="module-top"><div class="module-icon" style="background:rgba(79,120,147,0.14);color:var(--bath)">B</div><span class="module-status">Remodel module</span></div><h3>Bathroom remodeling</h3><p>Bathroom workflows can include vanity, tile, shower, tub, fixtures, flooring, waterproofing, demo, plumbing allowances, finish levels, labor, disposal, and contingency notes.</p></article>
+          <article class="module-card"><div class="module-top"><div class="module-icon" style="background:rgba(122,79,134,0.14);color:var(--room)">R</div><span class="module-status">Design module</span></div><h3>Room design</h3><p>Room design modules can support paint, flooring, trim, lighting, furniture allowances, decor packages, install labor, style direction, and proposal packages for interior refreshes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow">
+      <div class="section-inner">
+        <div class="label">Complete MVP workflow</div>
+        <h2>From lead to closed project, <em>without leaving the app.</em></h2>
+        <p class="lead">The MVP is focused on the sales-to-closeout workflow a solo contractor or small contractor team needs before heavier systems like accounting integrations, crew scheduling, inventory, and marketplace features.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num"></div><div><h3>Create customer and project</h3><p>Add customer details, site address, project name, module, job type, business branding, and internal notes.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h3>Capture photos and measurements</h3><p>Take or upload site photos, then enter trade-specific dimensions manually so the contractor remains in control of quantities and assumptions.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h3>Generate draft ideas and estimates</h3><p>Use AI-assisted design ideas and estimate drafts as a starting point. Adjust materials, labor, markup, taxes, deposit terms, exclusions, and package differences before publishing.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h3>Build Good / Better / Best packages</h3><p>Turn one job into clear customer choices with different scopes, materials, upgrades, pricing, and deposit amounts.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h3>Publish and share proposal</h3><p>Create a customer-ready proposal summary, share it through the device, and keep a published snapshot so accepted scope and prices stay preserved.</p></div></div>
+          <div class="step"><div class="step-num"></div><div><h3>Approval, deposit, invoice, closeout</h3><p>Record customer approval, manually confirm deposit, create and send invoice records, manually confirm payment, and move the project to closed status.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="section-inner">
+        <div class="label">Subscription model</div>
+        <h2>Simple pricing for the <em>first launch.</em></h2>
+        <p class="lead">Contractor Pro is designed for high-monetization contractor workflows, with a 7-day free trial and straightforward monthly or annual billing through Apple.</p>
+        <div class="price-cards">
+          <article class="price-card"><div class="price-name">Trial</div><div class="price-value">7 days</div><p>Test the proposal workflow, module screens, AI-assisted drafts, packages, proposal review, approval, invoice, and closeout flow before subscribing.</p></article>
+          <article class="price-card featured"><div class="price-name">Contractor Pro Monthly</div><div class="price-value">$39</div><p>Monthly access for contractors validating whether Contractor helps them create sharper proposals and win more jobs from field visits.</p></article>
+          <article class="price-card"><div class="price-name">Contractor Pro Annual</div><div class="price-value">$390</div><p>Annual access for contractors who want the full year at a discount compared with paying monthly for twelve months.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="label">What the app is and is not</div>
+        <h2>Built for proposal control, <em>not blind automation.</em></h2>
+        <p class="lead">The product deliberately avoids claiming that AI can guarantee job costs. Contractor helps draft, structure, and present work, while the contractor remains responsible for the final business decision.</p>
+        <table class="compare" aria-label="Contractor product boundaries">
+          <thead><tr><th>Contractor helps with</th><th>Contractor does not replace</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Drafting ideas:</strong> AI-assisted concepts, scope language, and design direction by module.</td><td><strong>Professional judgment:</strong> Final design, code compliance, structural decisions, permits, and customer commitments.</td></tr>
+            <tr><td><strong>Estimating workflow:</strong> Material quantities, labor assumptions, markup, tax, deposit, package totals, and editable line items.</td><td><strong>Guaranteed pricing:</strong> Contractors must verify costs, measurements, local rates, taxes, site constraints, and supplier pricing.</td></tr>
+            <tr><td><strong>Proposal operations:</strong> Published snapshot, approval record, manual deposit confirmation, invoice record, manual payment confirmation, and project closeout.</td><td><strong>Payment processing:</strong> MVP payment confirmation is manual. Live payment integration can come later.</td></tr>
+            <tr><td><strong>Local-first storage:</strong> On-device project workspace with backup export and restore.</td><td><strong>Full cloud CRM/accounting:</strong> Deep QuickBooks integration, inventory, crew scheduling, marketplace, and permit workflows are outside the first MVP.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="deep">
+      <div class="section-inner">
+        <div class="label">Why it matters</div>
+        <h2>Contractors sell trust, clarity, and <em>options.</em></h2>
+        <p class="lead">Many small contractors lose jobs because proposals are slow, vague, inconsistent, or too hard for the customer to compare. Contractor is designed to make every job easier to explain and easier to approve.</p>
+        <div class="grid">
+          <article class="card"><h3>Better site visit follow-through</h3><p>Capture the project while details are fresh, keep photos and assumptions together, and move toward a proposal before momentum is lost.</p></article>
+          <article class="card"><h3>More professional customer experience</h3><p>Good / Better / Best choices make scope and price differences clearer, helping customers choose instead of simply accepting or rejecting one number.</p></article>
+          <article class="card"><h3>Less operational drift</h3><p>Approval, deposit, invoice, payment confirmation, and closeout status stay connected to the proposal instead of scattered across notes and messages.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="label">Frequently asked questions</div>
+        <h2>Questions before <em>review.</em></h2>
+        <div class="faq-grid">
+          <article class="faq"><h3>Is Contractor only for landscaping?</h3><p>No. Landscaping is the first module, but the app is built as a modular contractor platform. Painting, outdoor living, kitchen, bathroom, and room design modules can each have their own fields, formulas, prompts, and templates.</p></article>
+          <article class="faq"><h3>Does AI create guaranteed estimates?</h3><p>No. AI helps draft ideas and estimate starting points. Contractors must verify measurements, pricing, material choices, labor assumptions, taxes, deposits, and proposal terms before sending anything to a customer.</p></article>
+          <article class="faq"><h3>Does the MVP process real customer payments?</h3><p>No. Customer deposit and invoice payment confirmation are manual in the MVP. The contractor records payment status after confirming it outside the app.</p></article>
+          <article class="faq"><h3>Where is project data stored?</h3><p>The first release is local-first. Data is stored on the device, with backup export and restore options so contractors can save backup files to destinations they control.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-strip">
+      <div class="section-inner">
+        <div class="label">Review-ready legal pages</div>
+        <h2>Privacy and terms for <em>Contractor.</em></h2>
+        <p class="lead">The App Store review links for Contractor are available here. They describe local-first storage, backups, subscriptions, AI-assisted draft limits, manual payment tracking, and contractor responsibility for final estimates.</p>
+        <div class="legal-links">
+          <a class="btn dark" href="contractor-privacy.html">Privacy Policy</a>
+          <a class="btn light" href="contractor-terms.html">Terms of Use</a>
+          <a class="btn light" href="mailto:support@nionlite.com">Contact Support</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025-2026 NiONlite LLC. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="legal.html">Legal</a>
+      <a href="mailto:support@nionlite.com">support@nionlite.com</a>
+    </div>
+  </footer>
+</body>
+</html>
