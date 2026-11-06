@@ -4,18 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ByWhen Smart Deadline Reminder App for iPhone &amp; Android</title>
-  <meta name="description" content="ByWhen creates adaptive deadline reminders around task effort, calendar blocks, sleep, work hours, recurrence, and urgency on iPhone and Android." />
+  <meta name="description" content="ByWhen is a deadline planner for iPhone and Android with adaptive reminders, a color-coded timeline, task search, and calendar-aware scheduling." />
   <link rel="canonical" href="https://nionlite.com/bywhen.html" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="apple-itunes-app" content="app-id=6778767584" />
   <link rel="alternate" href="android-app://com.nionlite.bywhen/https/nionlite.com/bywhen.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ByWhen - Deadline Reminders for iPhone and Android" />
-  <meta property="og:description" content="Create deadline reminders that adapt to time left, effort, calendar blocks, sleep, work rhythm, and recurring tasks." />
+  <meta property="og:title" content="ByWhen - Deadline Planner for iPhone and Android" />
+  <meta property="og:description" content="See what needs attention next and find a time to do it with adaptive reminders and a color-coded planning timeline." />
   <meta property="og:url" content="https://nionlite.com/bywhen.html" />
   <meta property="og:image" content="https://nionlite.com/bywhen-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="ByWhen - Deadline Reminders for iPhone and Android" />
+  <meta name="twitter:title" content="ByWhen - Deadline Planner for iPhone and Android" />
   <meta name="twitter:description" content="Smart deadline reminders that find realistic windows before time runs out." />
   <meta name="twitter:image" content="https://nionlite.com/bywhen-icon.png" />
   <script type="application/ld+json">
@@ -23,16 +23,16 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "ByWhen",
-    "alternateName": "ByWhen Deadline Reminders",
+    "alternateName": "ByWhen: Deadline Planner",
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": "iOS, Android",
     "url": "https://nionlite.com/bywhen.html",
     "downloadUrl": [
-      "https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584",
+      "https://apps.apple.com/us/app/bywhen-deadline-planner/id6778767584",
       "https://play.google.com/store/apps/details?id=com.nionlite.bywhen"
     ],
     "installUrl": [
-      "https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584",
+      "https://apps.apple.com/us/app/bywhen-deadline-planner/id6778767584",
       "https://play.google.com/store/apps/details?id=com.nionlite.bywhen"
     ],
     "description": "Smart deadline reminder app that schedules adaptive nudges around effort, calendar availability, sleep, work rhythm, and task type.",
@@ -43,6 +43,8 @@
       "Calendar-aware reminder windows",
       "Sleep, work hours, and workday rules",
       "Recurring deadline reminders",
+      "Color-coded planning timeline and task search",
+      "Finished task history",
       "Task-specific reminder styles and notification actions"
     ],
     "offers": {
@@ -156,46 +158,33 @@
     .trust-line { display: flex; flex-wrap: wrap; gap: 0.65rem; color: var(--muted); font-size: 0.83rem; }
     .trust-line span { padding: 0.42rem 0.66rem; background: rgba(255, 255, 255, 0.58); border: 1px solid var(--line); border-radius: 8px; }
 
-    .showcase { position: relative; min-height: 560px; display: flex; align-items: center; justify-content: center; }
-    .phone {
-      position: relative; z-index: 2; width: min(350px, 84vw); height: 560px;
-      border-radius: 34px; background: var(--ink); padding: 14px; box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.18);
+    .showcase { display: grid; justify-items: center; margin: 0; }
+    .preview-phone {
+      position: relative; width: min(320px, 100%); min-width: 0; padding: 22px 10px 10px;
+      border: 1px solid var(--line); border-radius: 34px; background: var(--ink); box-shadow: var(--shadow);
     }
-    .phone::before {
-      content: ""; position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
-      width: 72px; height: 5px; background: rgba(255, 255, 255, 0.18); border-radius: 999px; z-index: 4;
+    .preview-phone::before {
+      content: ""; position: absolute; top: 9px; left: 50%; transform: translateX(-50%);
+      width: 60px; height: 5px; border-radius: 999px; background: rgba(255,255,255,0.2);
     }
-    .screen {
-      height: 100%; overflow: hidden; border-radius: 24px; background: var(--paper);
-      padding: 1.1rem; display: flex; flex-direction: column; gap: 0.78rem;
-    }
-    .screen-head { display: flex; align-items: center; justify-content: space-between; margin-top: 0.8rem; }
-    .mini-brand { display: flex; align-items: center; gap: 0.55rem; font-weight: 900; }
-    .mini-brand img { width: 28px; height: 28px; border-radius: 8px; }
-    .risk-pill { color: #fff; background: var(--accent); font-size: 0.62rem; font-weight: 800; padding: 0.35rem 0.55rem; border-radius: 999px; }
-    .today-card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.92rem; }
-    .task-title { font-size: 1.45rem; line-height: 1.15; font-weight: 800; margin: 0.5rem 0; }
-    .task-meta { color: var(--muted); font-size: 0.78rem; line-height: 1.55; }
-    .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
-    .metric { background: var(--fog); border: 1px solid var(--line); border-radius: 8px; padding: 0.8rem; }
-    .metric strong { display: block; font-size: 1.35rem; line-height: 1; }
-    .metric span { display: block; color: var(--muted); font-size: 0.68rem; margin-top: 0.35rem; }
-    .window-card { background: var(--ink); color: #fff; border-radius: 8px; padding: 1rem; }
-    .window-card small { display: block; color: rgba(255,255,255,0.62); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
-    .window-card strong { font-size: 1.25rem; }
-    .action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
-    .screen-btn { min-height: 42px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 0.78rem; font-weight: 900; }
-    .screen-btn.start { background: var(--accent); color: #fff; }
-    .screen-btn.later { background: #fff; border: 1px solid var(--line); color: var(--ink); }
-    .floating-card {
-      position: absolute; z-index: 3; width: 206px; padding: 1rem; border: 1px solid var(--line);
-      background: rgba(255,255,255,0.9); border-radius: 8px; box-shadow: 0 18px 50px rgba(35, 32, 28, 0.14);
-    }
-    .floating-card strong { display: block; font-size: 0.95rem; margin-bottom: 0.35rem; }
-    .floating-card span { color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
-    .floating-card.one { top: 28px; left: 0; border-top: 4px solid var(--accent); }
-    .floating-card.two { right: 0; bottom: 30px; border-top: 4px solid var(--gold); }
+    .preview-screen { display: grid; gap: 0.85rem; padding: 1rem; border-radius: 24px; background: var(--paper); }
+    .preview-brand { display: flex; align-items: center; gap: 0.5rem; color: var(--accent); font-size: 0.78rem; font-weight: 800; }
+    .preview-brand img { border-radius: 7px; }
+    .preview-title { font: 700 2rem/1 'Cormorant Garamond', serif; }
+    .preview-focus { padding: 0.9rem; border-radius: 8px; color: #fff; background: linear-gradient(140deg, #185958, #22706b 57%, #9b6428); }
+    .preview-focus small, .preview-focus span { display: block; font-size: 0.75rem; line-height: 1.5; }
+    .preview-focus strong { display: block; font-size: 1.35rem; line-height: 1.15; margin: 0.3rem 0 0.65rem; }
+    .preview-label { display: block; font-size: 0.8rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .preview-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 0.55rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: 0.78rem; }
+    .preview-row span { color: #625b51; font-size: 0.72rem; }
+    .preview-tabs { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; border-top: 1px solid var(--line); padding-top: 0.65rem; color: #625b51; font-size: 0.72rem; }
+    .preview-tabs strong { color: var(--accent); }
+    .preview-band { background: #fff; }
+    .preview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .preview-panel { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); padding: 1.4rem; }
+    .preview-panel h3 { margin-bottom: 0.75rem; font: 700 1.75rem/1.1 'Cormorant Garamond', serif; }
+    .preview-panel .preview-row { grid-template-columns: minmax(0, 1fr) auto; margin-top: 0.4rem; border: 0; border-inline-start: 3px solid var(--preview-accent); border-radius: 6px; padding: 0.6rem 0.7rem; background: var(--preview-tint); }
+    .preview-panel p { margin-top: 0.85rem; font-size: 0.86rem; line-height: 1.55; color: #625b51; }
 
     section { padding: 6.5rem 6%; }
     .section-inner { width: min(1120px, 100%); margin: 0 auto; }
@@ -294,8 +283,7 @@
       h1 { font-size: 4.2rem; }
       h2, .premium-copy h2, .final-cta h2 { font-size: 2.8rem; }
       .final-cta h2 { font-size: clamp(2.4rem, 6vw, 4.7rem); }
-      .showcase { min-height: 520px; }
-      .floating-card { display: none; }
+      .showcase { margin-top: 0.5rem; }
       .factor-grid, .timeline, .privacy-grid, .guide-grid { grid-template-columns: 1fr; }
       .premium-list { grid-template-columns: 1fr; }
     }
@@ -308,8 +296,8 @@
       h2, .premium-copy h2, .final-cta h2 { font-size: 2.35rem; }
       .final-cta h2 { font-size: clamp(2.4rem, 6vw, 4.7rem); }
       .hero-sub { font-size: 1rem; }
-      .showcase { min-height: 540px; width: 320px; max-width: calc(100vw - 40px); justify-content: flex-start; }
-      .phone { width: min(320px, 100%); height: 536px; }
+      .showcase { margin-top: 2rem; }
+      .preview-grid { grid-template-columns: 1fr; }
       .cta-row .btn { width: 100%; }
       .store-badge img { height: 48px; }
     }
@@ -327,7 +315,7 @@
       <a href="#premium">Premium</a>
       <a href="#guides">Guides</a>
       <a href="bywhen-privacy.html">Privacy</a>
-      <a class="nav-cta" href="https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584" target="_blank" rel="noopener">Download</a>
+      <a class="nav-cta" href="https://apps.apple.com/us/app/bywhen-deadline-planner/id6778767584" target="_blank" rel="noopener">Download</a>
     </div>
   </nav>
 
@@ -335,10 +323,10 @@
     <div class="hero-inner">
       <div>
         <div class="eyebrow">Smart deadline reminders</div>
-        <h1>Do it <span>by when</span> it matters.</h1>
-        <p class="hero-sub">ByWhen turns a deadline into a realistic reminder plan. It looks at how long the task takes, what kind of task it is, your calendar, sleep, work rhythm, and how urgent the deadline has become.</p>
+        <h1>ByWhen <span>Deadline Planner</span></h1>
+        <p class="hero-sub">See what needs your attention next and find a realistic time to get it done. ByWhen plans reminders around the effort a task takes, your calendar, and your daily routine.</p>
         <div class="store-badges" aria-label="Download ByWhen">
-          <a class="store-badge" href="https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584" target="_blank" rel="noopener" aria-label="Download ByWhen on the App Store">
+          <a class="store-badge" href="https://apps.apple.com/us/app/bywhen-deadline-planner/id6778767584" target="_blank" rel="noopener" aria-label="Download ByWhen on the App Store">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
           </a>
           <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.nionlite.bywhen" target="_blank" rel="noopener" aria-label="Get ByWhen on Google Play">
@@ -350,47 +338,60 @@
           <a class="btn secondary" href="#factors">See how it works</a>
         </div>
         <div class="trust-line" aria-label="Product highlights">
-          <span>7 days of Premium</span>
+          <span>Color-coded timeline</span>
           <span>Private by design</span>
           <span>Calendar aware</span>
         </div>
       </div>
 
-      <div class="showcase" aria-label="ByWhen product preview">
-        <div class="floating-card one"><strong>Calendar aware</strong><span>Avoid busy blocks and protect sleep before choosing the next nudge window.</span></div>
-        <div class="phone">
-          <div class="screen">
-            <div class="screen-head">
-              <div class="mini-brand"><img src="bywhen-icon.png" alt="" width="28" height="28" decoding="async" /> ByWhen</div>
-              <span class="risk-pill">Critical</span>
+      <figure class="showcase" aria-label="Illustrated preview of ByWhen Today">
+        <div class="preview-phone">
+          <div class="preview-screen">
+            <div class="preview-brand"><img src="bywhen-icon.png" alt="" width="30" height="30" decoding="async" /> ByWhen</div>
+            <div class="preview-title">Today</div>
+            <div class="preview-focus">
+              <small>Due today</small>
+              <strong>Finish project proposal</strong>
+              <span>Best next window: 3:15 PM</span>
+              <span>45 min to finish</span>
             </div>
-            <div class="today-card">
-              <div class="task-meta">Due Sunday at 6:00 PM</div>
-              <div class="task-title">Finish project proposal</div>
-              <div class="task-meta">Deep work &middot; Balanced nudges &middot; Can split</div>
+            <div>
+              <strong class="preview-label">Today &amp; Next</strong>
+              <div class="preview-row"><strong>Call the dentist</strong><span>4:10 PM</span></div>
+              <div class="preview-row"><strong>Pick up parcel</strong><span>Tomorrow</span></div>
             </div>
-            <div class="metric-grid">
-              <div class="metric"><strong>2h</strong><span>Remaining</span></div>
-              <div class="metric"><strong>4h</strong><span>Open today</span></div>
-            </div>
-            <div class="window-card">
-              <small>Best next window</small>
-              <strong>Today, 3:15 PM for 45m</strong>
-            </div>
-            <div class="today-card">
-              <div class="task-meta">Why this nudge</div>
-              <div class="task-meta">Sleep protected, workday considered, 2 calendar blocks avoided, deadline risk rising.</div>
-            </div>
-            <div class="action-row">
-              <div class="screen-btn start">Start</div>
-              <div class="screen-btn later">Later</div>
-            </div>
+            <div class="preview-tabs"><strong>Today</strong><span>Plan</span><span>Settings</span></div>
           </div>
         </div>
-        <div class="floating-card two"><strong>Recurring ready</strong><span>Daily, weekly, monthly, yearly, and selected-day tasks roll forward after completion.</span></div>
-      </div>
+      </figure>
     </div>
   </header>
+
+  <section class="preview-band" aria-labelledby="preview-title">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="sec-label">Inside ByWhen</div>
+        <h2 id="preview-title">From due date to doable.</h2>
+        <p>See overdue and upcoming tasks in Today, search for a task in Today or Plan, and revisit completed work in Finished Tasks. The Plan timeline shows suggested sessions alongside calendar blocks.</p>
+      </div>
+      <div class="preview-grid">
+        <article class="preview-panel" aria-label="Example Plan timeline">
+          <h3>Plan timeline</h3>
+          <div class="preview-row" style="--preview-accent:#21735b;--preview-tint:#e8f2eb;"><strong>Team check-in</strong><span>2:00 PM</span></div>
+          <div class="preview-row" style="--preview-accent:#78629a;--preview-tint:#eee9f5;"><strong>Finish project proposal</strong><span>3:15 PM</span></div>
+          <div class="preview-row" style="--preview-accent:#174b73;--preview-tint:#e6eff8;"><strong>Call the dentist</strong><span>4:10 PM</span></div>
+          <p>Suggested sessions sit alongside calendar events.</p>
+        </article>
+        <article class="preview-panel" aria-label="Example Finished Today list">
+          <h3>Finished Today</h3>
+          <div class="preview-row" style="--preview-accent:#78629a;--preview-tint:#eee9f5;"><strong>Pay electricity bill</strong><span>9:10 AM</span></div>
+          <div class="preview-row" style="--preview-accent:#78629a;--preview-tint:#eee9f5;"><strong>Send birthday card</strong><span>11:25 AM</span></div>
+          <div class="preview-row" style="--preview-accent:#78629a;--preview-tint:#eee9f5;"><strong>Review weekly budget</strong><span>12:45 PM</span></div>
+          <p>See today's completions or open your finished-task history.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section id="factors">
     <div class="section-inner">
@@ -429,10 +430,11 @@
   <section id="premium" class="premium">
     <div class="section-inner premium-wrap">
       <div class="premium-copy">
-        <span class="premium-badge">Premium from day one</span>
-        <h2>Your first 7 days are Premium.</h2>
-        <p>ByWhen starts as the full product, not a thin free tier. During the first 7 days, every smart reminder stays active. After that, your reminders remain safe, but Premium keeps all of them active and adaptive.</p>
-        <p>No NiONlite account is required for the first 7 days. Subscription purchases are handled by the App Store or Google Play on the device where you subscribe.</p>
+        <span class="premium-badge">ByWhen Premium</span>
+        <h2>Try the full planner.</h2>
+        <p><strong>iPhone:</strong> New users get 14 days of Premium on the latest version. No NiONlite account or payment is required to start, and the included access does not turn into a paid subscription. When it ends, you can still act on existing reminders. Premium is required to add or edit tasks, sync, or back up. If you never purchase Premium, recurring reminders are limited to occurrences due within 90 days after the included access ends. One-time reminders aren't subject to that cutoff.</p>
+        <p><strong>Android:</strong> Any free trial is offered through an eligible Google Play subscription. Check Google Play for availability, duration, and the renewal price before subscribing. Cancel in Google Play before a trial ends to avoid being charged.</p>
+        <p>Paid plans are managed by the store you purchase from. See the <a href="bywhen-terms.html">Terms of Use</a> for more details.</p>
       </div>
       <div class="premium-list">
         <div class="premium-item"><strong>Unlimited smart reminders</strong><span>Keep every deadline and recurring task active.</span></div>
@@ -450,11 +452,11 @@
       <div class="section-head">
         <div class="sec-label">Private by design</div>
         <h2>Your schedule should feel personal because it stays personal.</h2>
-        <p>ByWhen is privacy focused by design. Your tasks, deadline plans, rhythm settings, calendar blocks, and local backups stay on your device. Data does not go to NiONlite servers for planning, and backup files only leave the device if you choose to export them to your own iCloud Drive or another destination.</p>
+        <p>ByWhen does its planning on your device. Your tasks and calendar blocks aren't sent to NiONlite servers for scheduling. You choose where to export backups, and system backups or transfers follow your device settings.</p>
       </div>
       <div class="privacy-grid">
         <article class="privacy-card"><strong>On-device planning</strong><span>Smart reminder scoring runs from data stored locally on your device.</span></article>
-        <article class="privacy-card"><strong>Your backup, your choice</strong><span>Backup files only leave your device when you explicitly export them to iCloud Drive or another destination.</span></article>
+        <article class="privacy-card"><strong>Export to a destination you choose</strong><span>Save a copy to Files on iPhone or a supported location on Android.</span></article>
         <article class="privacy-card"><strong>No account required</strong><span>ByWhen can be used without creating a NiONlite account.</span></article>
         <article class="privacy-card"><strong>No ad tracking</strong><span>The app is not built around ad networks or cross-app tracking.</span></article>
       </div>
@@ -493,9 +495,9 @@
 
   <section class="final-cta" id="download">
     <h2>Make deadlines easier to trust.</h2>
-    <p>ByWhen is available now for iPhone and Android. Start with 7 days of ByWhen Premium and turn important deadlines into adaptive reminder plans.</p>
+    <p>Download ByWhen for iPhone or Android and give your next deadline a plan that fits your day.</p>
     <div class="store-badges" style="justify-content:center;margin-bottom:0;" aria-label="Download ByWhen">
-      <a class="store-badge" href="https://apps.apple.com/us/app/bywhen-deadline-reminders/id6778767584" target="_blank" rel="noopener" aria-label="Download ByWhen on the App Store">
+      <a class="store-badge" href="https://apps.apple.com/us/app/bywhen-deadline-planner/id6778767584" target="_blank" rel="noopener" aria-label="Download ByWhen on the App Store">
         <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" />
       </a>
       <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.nionlite.bywhen" target="_blank" rel="noopener" aria-label="Get ByWhen on Google Play">
