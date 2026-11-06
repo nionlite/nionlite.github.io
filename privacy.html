@@ -135,63 +135,40 @@
   <main>
     <div class="page-eyebrow">CUB Rates</div>
     <h1>Privacy <em>Policy</em></h1>
-    <p class="updated">Last updated: April 23, 2026</p>
+    <p class="updated">Last updated: November 5, 2026</p>
 
-    <p class="intro">This Privacy Policy describes how NiONlite LLC ("NiONlite", "we", "us", or "our"), a company incorporated in the State of Maryland, United States, collects, uses, discloses, and protects information when you use our mobile applications, including CUB Rates ("the App"). By using the App, you agree to the practices described in this policy. If you do not agree, please do not use the App.</p>
+    <p class="intro">This Privacy Policy describes how NiONlite LLC (“NiONlite”, “we”, “us”, or “our”), a Maryland limited liability company, handles information when you use CUB Rates (“the App”).</p>
 
     <h2>1. Information We Collect</h2>
-    <p>We collect only the information necessary to operate and improve the App. The categories of data we collect are:</p>
-
-    <h3>Information You Provide Directly</h3>
+    <p>You can use the free best-rate snapshot, mortgage calculator, and general rate-update notifications without a CUB account. Some services use installation or device identifiers even in guest mode.</p>
     <ul>
-      <li><strong>Email address</strong>: used for account creation, login, rate alerts, and support communication</li>
-      <li><strong>Password</strong>: stored as a secure hash by Firebase Authentication (we never see your plain-text password)</li>
-      <li><strong>App preferences</strong>: your saved favorites, rate alert thresholds, and bank selections</li>
-      <li><strong>Support correspondence</strong>: any emails you send to our support address</li>
+      <li><strong>Account and preferences.</strong> If you create an account, we process your email address, account identifier, and verification status. Firebase Authentication handles your password. We store account features such as saved favorites and target-rate alerts, including the lender, loan type, and threshold you choose.</li>
+      <li><strong>Notifications.</strong> The App saves your general notification preference on your device. For push delivery, Firebase Cloud Messaging uses installation identifiers and registration tokens to route messages. On Apple devices, delivery also uses Apple Push Notification service.</li>
+      <li><strong>Purchases.</strong> The App Store and Google Play process payments. We and our purchase verification providers may process purchase identifiers, product and transaction information, purchase tokens or receipts, and Premium access and expiration status. RevenueCat may process an app user identifier, including a pseudonymous identifier for guest purchases. We do not receive your payment card number.</li>
+      <li><strong>Technical information.</strong> Our services and providers may process IP addresses, app and device information, request logs, and security signals such as App Check tokens. The App also saves local settings, cached rates, and session information used to keep you signed in.</li>
+      <li><strong>Support.</strong> We receive the email address and information you include when contacting us, including any diagnostics you choose to share.</li>
     </ul>
-
-    <h3>Information Collected Automatically</h3>
-    <ul>
-      <li><strong>Device information</strong>: device model, operating system version, app version</li>
-      <li><strong>IP address</strong>: collected by Firebase for security and abuse prevention; not used to identify you personally or track you across apps</li>
-      <li><strong>App usage data</strong>: actions within the app (e.g. which screens are viewed) used to improve reliability and features</li>
-      <li><strong>Crash and diagnostic data</strong>: anonymous error logs when the app crashes or encounters issues</li>
-      <li><strong>App Check tokens</strong>: short-lived security tokens issued by Apple App Attest (iOS) or Google Play Integrity (Android) to verify the app is genuine; contain no personal data</li>
-    </ul>
-
-    <h3>Information We Do NOT Collect</h3>
-    <p>We do <strong>not</strong> collect:</p>
-    <ul>
-      <li>Your legal name, physical address, or phone number</li>
-      <li>Payment card numbers, bank accounts, or financial credentials (billing is handled entirely by Apple or Google)</li>
-      <li>Precise location data or GPS coordinates</li>
-      <li>Contacts, photos, microphone, or camera data</li>
-      <li>Any information from tracking across other apps or websites (we do not use the IDFA or engage in cross-app tracking)</li>
-    </ul>
+    <p>CUB does not ask for your phone number, precise GPS location, bank credentials, contacts, photos, or camera or microphone recordings to compare rates. Selecting a state is a search preference.</p>
 
     <div class="divider"></div>
 
     <h2>2. How We Use Your Information</h2>
-    <p>We use the information we collect strictly to operate the App:</p>
     <ul>
-      <li>To create and maintain your account</li>
-      <li>To verify your subscription status and unlock premium features</li>
-      <li>To send rate drop alert emails based on thresholds you have configured</li>
-      <li>To respond to support requests</li>
-      <li>To detect and prevent fraud, abuse, and unauthorized access</li>
-      <li>To monitor, debug, and improve App performance and reliability</li>
-      <li>To comply with legal obligations</li>
+      <li>Provide rate data, maintain your account, and save preferences and alerts.</li>
+      <li>Verify purchases, restore access, and determine whether Premium is active.</li>
+      <li>Deliver optional general push notifications and target-rate emails you set up.</li>
+      <li>Respond to support requests, maintain reliability and security, prevent abuse, and meet legal obligations.</li>
     </ul>
-    <p>We do <strong>not</strong> sell, rent, share, or disclose your personal data to third parties for their marketing purposes. We do not use your data for advertising or profiling.</p>
+    <p>We do not sell your personal information or provide it to lenders as sales leads. We do not use it for cross-app advertising.</p>
 
     <div class="divider"></div>
 
     <h2>3. Legal Basis for Processing (GDPR)</h2>
     <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, our legal bases for processing your personal data are:</p>
     <ul>
-      <li><strong>Contract</strong>: to provide the App and its subscription services you have requested</li>
+      <li><strong>Contract</strong>: to provide the App and the Premium access or account services you request</li>
       <li><strong>Legitimate interests</strong>: to keep the App secure, prevent fraud, and improve performance</li>
-      <li><strong>Consent</strong>: where you have given us specific permission (e.g. rate alert emails)</li>
+      <li><strong>Consent</strong>: where you have given us specific permission (for example, optional general push notifications)</li>
       <li><strong>Legal obligation</strong>: where we must retain data to comply with applicable laws</li>
     </ul>
 
@@ -201,13 +178,14 @@
     <p>The App relies on the following third-party service providers. Each has its own privacy policy governing how they handle your data:</p>
 
     <ul>
-      <li><strong>Google Firebase (Google LLC)</strong>: authentication, database (Firestore), security (App Check), and serverless functions. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
-      <li><strong>Apple App Store / StoreKit (Apple Inc.)</strong>: in-app subscription processing and App Attest verification on iOS. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
-      <li><strong>Google Play Billing (Google LLC)</strong>: in-app subscription processing on Android. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-      <li><strong>SendGrid (Twilio Inc.)</strong>: transactional email delivery for rate alerts and account notifications. <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="noopener">Twilio Privacy Policy</a></li>
+      <li><strong>Google Firebase (Google LLC)</strong>: authentication, database (Firestore), security (App Check), serverless functions, and push delivery (Firebase Cloud Messaging). <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></li>
+      <li><strong>Apple (Apple Inc.)</strong> processes App Store purchases and provides App Attest and Apple Push Notification service on iOS. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+      <li><strong>Google (Google LLC)</strong> processes Google Play purchases and provides Play Integrity on Android. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      <li><strong>RevenueCat</strong> verifies purchases and manages Premium access where used. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></li>
+      <li><strong>SendGrid (Twilio Inc.)</strong>: transactional email delivery for target-rate alerts. <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="noopener">Twilio Privacy Policy</a></li>
     </ul>
 
-    <p>We do not integrate any third-party advertising networks, analytics trackers, or social-media SDKs.</p>
+    <p>CUB is ad-free. The providers listed above support services such as purchase verification and notification delivery.</p>
 
     <div class="divider"></div>
 
@@ -230,7 +208,9 @@
       <li><strong>Backup copies</strong>: may persist in encrypted backups for up to 90 days after deletion</li>
     </ul>
 
-    <h2>8. Account Deletion and Your Rights</h2>
+    <p>Push delivery identifiers and store transaction records may be retained separately by the providers that operate those services. See their privacy policies in Section 4 for details.</p>
+
+    <h2 id="account-deletion">8. Account Deletion and Your Rights</h2>
     <p>You have the right to:</p>
     <ul>
       <li><strong>Access</strong>: request a copy of the personal data we hold about you</li>
@@ -243,7 +223,7 @@
     </ul>
     <p>To exercise any of these rights, email us at <a href="mailto:support@nionlite.com">support@nionlite.com</a> with the subject line <strong>"Privacy Request"</strong>. We will respond within 30 days. We may need to verify your identity before processing the request.</p>
 
-    <p><strong>To delete your account</strong>, email us at <a href="mailto:support@nionlite.com">support@nionlite.com</a> with the subject line <strong>"Account Deletion Request"</strong>. Please note that deleting your account does not automatically cancel active subscriptions — you must cancel these through your Apple ID Account Settings or Google Play Account Settings first.</p>
+    <p><strong>To delete your CUB account,</strong> sign in, open Settings → Delete Account, and follow the confirmation prompts. You can also email <a href="mailto:support@nionlite.com">support@nionlite.com</a> with the subject “Account Deletion Request”. To stop renewal of an older subscription, use the App Store or Google Play subscription settings separately.</p>
 
     <div class="divider"></div>
 
@@ -271,7 +251,8 @@
     <p>Our App does not track you across apps or websites owned by other companies. We do not use the Apple Advertising Identifier (IDFA), Google Advertising ID (GAID), or similar tracking identifiers. Our App does not respond to Do Not Track ("DNT") browser signals because we do not engage in tracking in the first place.</p>
 
     <h2>12. Notifications</h2>
-    <p>If you enable rate alerts, we will send you email notifications at the address on file when a rate you're monitoring meets your threshold. You can disable these notifications at any time by removing alerts in the app or by contacting us. We do not send marketing emails unless you have explicitly opted in.</p>
+    <p><strong>General rate-update push notifications.</strong> On a supported version, turn on Mortgage rate updates in Settings → Notifications and grant device permission. This feature can work without an email address or CUB account. The App uses a shared Firebase Cloud Messaging topic for these announcements. You can turn them off in CUB or block delivery in your device settings. Turning off delivery is separate from requesting deletion of data.</p>
+    <p><strong>Premium target-rate email alerts.</strong> If you set up an alert with a verified account, we use your email address and saved alert criteria to send matching updates. Remove the alert in CUB to stop its emails. These alerts are separate from general push notifications.</p>
 
     <div class="divider"></div>
 
@@ -280,7 +261,6 @@
 
     <h2>14. Apple App Store Specific Provisions</h2>
     <p>If you downloaded the App from the Apple App Store, please note that Apple Inc. is a third-party beneficiary of this Privacy Policy and may enforce its terms. Apple is not responsible for our privacy practices, and any privacy complaints should be directed to us at <a href="mailto:support@nionlite.com">support@nionlite.com</a>.</p>
-    <p>The disclosures in this Privacy Policy align with the App Privacy labels declared on our Apple App Store listing. If you notice any discrepancy, please contact us.</p>
 
     <h2>15. Governing Law</h2>
     <p>This Privacy Policy is governed by the laws of the State of Maryland, United States, without regard to its conflict of law provisions. This does not limit any rights you may have under the laws of your country of residence.</p>

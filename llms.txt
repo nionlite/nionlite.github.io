@@ -24,22 +24,20 @@ Key features:
 
 Contractor is not a guaranteed estimating, legal, accounting, payment processing, or construction compliance service. Contractors are responsible for final measurements, pricing, scope, taxes, terms, approvals, payments, and customer commitments.
 
-### CUB: Track daily Mortgage rate
+### CUB: Track Daily Mortgage Rate
 
-CUB: Track daily Mortgage rate is a finance app for iOS and Android that helps users compare published mortgage rates from credit unions and banks.
+CUB: Track Daily Mortgage Rate is a finance app for iOS and Android that helps users compare published mortgage rates from credit unions and banks.
 
 Primary page: https://nionlite.com/cub-rates.html
-App Store: https://apps.apple.com/us/app/cub-mortgage-rates-tracker/id6761875184
+App Store: https://apps.apple.com/us/app/cub-track-daily-mortgage-rate/id6761875184
 Google Play: https://play.google.com/store/apps/details?id=com.NiONlite.bcurates.bcu_rates
 
 Key features:
-- Daily published mortgage rate tracking
-- Credit union and bank mortgage rate comparison
-- One-year mortgage rate history charts for Premium users
-- State filters and advanced lender filters
-- Favorite lenders and rate drop alerts
-- Mortgage calculator with extra payment scenarios
-- 7-day Premium trial with no account or credit card required
+- Free best-rate snapshot and mortgage calculator with monthly, yearly, and one-time extra payments
+- Free, optional push notifications for new rate publications on supported app versions, with no CUB account required
+- One-time Premium passes through the App Store or Google Play that expire at the end of the selected term
+- Premium lender list, profiles, state and membership filters, favorites, and up to one year of rate history
+- Premium target-rate alerts for a selected lender, loan type, and threshold. Email delivery requires a verified CUB account.
 
 CUB is not a lender, mortgage broker, or loan marketplace. It is an informational research app that helps users compare publicly available mortgage rate information and confirm details directly with lenders.
 
